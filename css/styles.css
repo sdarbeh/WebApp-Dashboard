@@ -1,0 +1,307 @@
+.wrapper {
+    font-family: 'Quicksand', sans-serif;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas:
+            "header"
+            "content"
+            "main-content";
+}
+header {
+    grid-area: header;
+    height: 50px;
+    width: 100%;
+    background-color: #8C8C8C;
+}
+a {
+    color: #F2F2F2;
+    text-decoration: none;
+    font-weight: 600;
+}
+.icon {
+    width: 30px;
+    height: 30px;
+}
+.hamburger {
+    position: absolute;
+    top: 0;
+    margin-left: 10px;
+    z-index: 9999;
+}
+.logo-container {
+    position: absolute;
+    top: 0;
+    z-index: 9999;
+    margin-left: 40%;
+    font-weight: 700;
+}
+.content {
+    grid-area: content;
+}
+.content a:active {
+    border-right: 2px lawngreen solid;
+}
+nav {
+    width: 0;
+    display: none;
+ }
+.menu-expanded {
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: #404040;
+    overflow-x: hidden;
+    transition: 0.5s;
+    display: unset;
+    width: 100%;
+}
+.navigation-items, .navigation-items-2 {
+    text-align: center;
+}
+.navigation-items {
+    padding-top: 80px;
+}
+.navigation-items li {
+    width: 100%;
+}
+.navigation-items p, .navigation-items-2 {
+    margin: 0 0 10px 0;
+}
+.user-name {
+    font-weight: 600;
+    font-size: 1em;
+    margin: 0 0 10px 0;
+}
+.border {
+    width: 50% !important;
+    border-bottom: 1px silver solid;
+    margin: 0 auto!important;
+    padding-bottom: 30px;
+}
+.nav-icon, .profile-pic {
+    margin: 20px 0 20px 0;
+    fill: #F2F2F2;
+}
+.profile-pic {
+    border-radius: 50%;
+}
+.icon-bell-o {
+    margin-top: 30px;
+}
+.alert-icon-light-relative {
+    position: relative;
+}
+.alert-icon-light {
+    position: absolute;
+    top: 15%;
+    margin-left: -5px;
+    z-index: 9999999999;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: green;
+}
+.sign-out p {
+     margin-top: 30px;
+ }
+.page-title-search-bar {
+    grid-area: page-title-search-bar;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #D9D9D9;
+}
+.page-title-container {
+    border-right: 1px silver solid;
+    background-color: #F2F2F2;
+    width: 35%;
+}
+.page-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+    padding: 15px;
+}
+.search-container {
+    margin-right: 4%;
+    position: relative;
+    width: 50%;
+}
+.search-bar {
+    outline: none;
+    border: 1px silver solid;
+    border-radius: 5px;
+    padding: 7px 0 7px 10px;
+    width: 100%;
+}
+.search-icon {
+    position: absolute;
+    float: right;
+    width: 20px;
+    height: 20px;
+    top: 8px;
+    right: 10px;
+}
+.main-content {
+    background-color: #F2F2F2;
+}
+section, aside {
+    border: 1px silver solid;
+}
+.traffic {
+    border-top: unset;
+}
+.content-wrapper {
+    padding: 15px;
+}
+/*MEDIA QUERIES===================*/
+/* iPads (portrait and landscape) ----------- */
+@media (min-device-width : 768px) {
+    .wrapper {
+        grid-template-rows: 1fr 100% !important;
+        grid-template-columns: 70px 1fr!important;
+        grid-template-areas:
+                "header header"
+                "content main-content";
+    }
+    header {
+        height: 70px;
+        position: relative;
+    }
+    .logo-container {
+        margin-left: 20px;
+    }
+    .header-navigation-items {
+        position: absolute;
+        top: 15px;
+        margin-left: 70%;
+        width: 225px;
+        height: 50px;
+    }
+    .header-navigation-items li, .profile-pic, .user-name, .icon-bell-o  {
+        display: inline-block;
+    }
+    .icon-bell-o {
+        margin: 0 20px 0 0;
+        padding-right: 20px;
+        border-right: 2px #404040 solid;
+        height: 25px;
+        width: 25px;
+    }
+    .alert-icon-light {
+        top: -10%;
+        margin-left: -44px;
+    }
+    .profile-pic {
+        margin: 0 20px 0 0
+    }
+    .user-name {
+        position: absolute;
+        top: 5px;
+        margin: 0;
+    }
+    .content {
+        margin: 0;
+        background-color: #404040;
+    }
+    nav {
+        grid-area: navigation;
+        display: unset;
+        width: unset;
+    }
+    .traffic {
+        grid-area: traffic;
+        border-top: none !important;
+    }
+    .navigation-items {
+          padding-top: unset;
+    }
+    .main-content {
+        background-color: #F2F2F2;
+        display: grid;
+        grid-template-rows: 58px repeat(5, 1fr);
+        grid-template-columns: auto;
+        grid-template-areas:
+                "page-title-search-bar page-title-search-bar"
+                "traffic traffic"
+                "daily-traffic mobile-users"
+                "social-stats social-stats"
+                "new-members recent-activity"
+                "message-user settings";
+    }
+    .page-title-container {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        height: 41px;
+        width: 20%;
+    }
+    .search-container {
+        width: 40%;
+    }
+    .search-icon {
+        width: 15px;
+        height: 15px;
+    }
+    .daily-traffic, .mobile-users, .new-members, .recent-activity {
+        border-top: 1px #8C8C8C solid;
+        border-bottom: 1px #8C8C8C solid;
+     }
+    .daily-traffic, .new-members, .message-user {
+        border-right: 1px #8C8C8C solid;
+    }
+    .traffic {
+        grid-area: traffic;
+    }
+    .main-content {
+        grid-area: main-content;
+    }
+    .daily-traffic {
+        grid-area: daily-traffic;
+    }
+    .mobile-users {
+        grid-area: mobile-users;
+    }
+    .social-stats {
+        grid-area: social-stats;
+    }
+    .new-members {
+        grid-area: new-members;
+    }
+    .recent-activity {
+        grid-area: recent-activity;
+    }
+    .message-user {
+        grid-area: message-user;
+    }
+    .settings {
+        grid-area: settings;
+    }
+    /*  Removed from DOM */
+    .mobile, .hamburger,  .navigation-items p {
+        display: none!important;
+    }
+    section, aside {
+        border: unset;
+    }
+}
+/* Laptops, Desktops and Larger.. ----------- */
+@media (min-width : 1024px) {
+    body,  header {
+        max-width: 1500px;
+        margin: 0 auto;
+    }
+    .header-navigation-items {
+        margin-left: 83%;
+    }
+    .page-title-container {
+        width: 10%;
+    }
+    .search-container {
+        width: 25%;
+    }
+}
+
+
