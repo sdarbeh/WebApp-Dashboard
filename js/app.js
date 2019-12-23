@@ -8,15 +8,20 @@ const alertIcon = document.querySelector(".icon-bell-o");
 const alertIconLight = document.querySelector(".alert-icon-light");
 const mainContent = document.querySelector(".main-content");
 
+
+document.querySelector("#default-focus").focus();
+
+
 hamburger.addEventListener("click", function() {
     hamburgerMenu();
 });
 
-hamburgerMenu = () => {
-        hamburger.classList.toggle("is-active");
-        nav.classList.toggle("menu-expanded");
-};
 
+
+
+
+
+// -------- Functions
 tabletMediaQuery = () => {
     const x = window.matchMedia("(min-width: 768px)");
     let headerNavItems = nav.getElementsByTagName("ul")[1];
@@ -27,18 +32,16 @@ tabletMediaQuery = () => {
         header.appendChild(headerNavItems);
         mainContent.insertBefore(titleSearch, mainContent.firstChild);
     }
-};
-tabletMediaQuery();
+};   tabletMediaQuery();
 
-activePage = () => {
-    let navElements = document.querySelectorAll("content li");
-    for (var i = 0; i &lt; navElements.length; i++) {
-        console.log('navElements[i]: ', navElements[i].clientHeight);
-    }
-        // navItems[i].addEventListener("click", () => {
-        //
-        //     // document.querySelectorAll("content li").classList.toggle("nav-active");
-        // });
-    }
+hamburgerMenu = () => {
+    hamburger.classList.toggle("is-active");
+    nav.classList.toggle("menu-expanded");
 };
-activePage();
+alertBox = () => {
+    let close = document.querySelector(".close");
+    let alertMessageBox = document.querySelector(".alert-message-container");
+    close.addEventListener("click", () => {
+        alertMessageBox.style.display  = "none";
+    })
+};   alertBox();

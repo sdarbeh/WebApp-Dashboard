@@ -61,48 +61,213 @@
         <main class="main-content">
             <section class="traffic">
                 <div class="content-wrapper">
-                    <p>Traffic</p>
+                    <div class="alert-message-container">
+                        <p class="alert-message"><span>Alert&nbsp</span>&nbspYou have 4 unopened messages</p>
+                        <a href="#"><span class="close">X</span></a>
+                    </div>
+                    <div class="traffic-container">
+                        <h3 class="section-title">Traffic</h3>
+                        <ul class="traffic-filter">
+                            <li><a href="#">Hourly</a></li>
+                            <li><a href="#">Daily</a></li>
+                            <li><a href="#" id="default-focus">Weekly</a></li>
+                            <li><a href="#">Monthly</a></li>
+                        </ul>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam architecto cumque, dicta distinctio dolor eligendi impedit, ipsum laboriosam minima neque odit officiis, rerum saepe similique veniam vero voluptatem voluptatum!</p>
                 </div>
             </section>
 
             <section class="daily-traffic">
                 <div class="content-wrapper">
-                    <p>Daily traffic</p>
+                    <h3 class="section-title">Daily traffic</h3>
                 </div>
             </section>
 
             <section class="mobile-users">
                 <div class="content-wrapper">
-                    <p>Mobile users</p>
+                    <h3 class="section-title">Mobile users</h3>
                 </div>
             </section>
 
             <section class="social-stats">
                 <div class="content-wrapper">
-                    <p>Social stats</p>
-                </div>
-            </section>
-
-            <section class="new-members">
-                <div class="content-wrapper">
-                    <p>New members</p>
+                    <h3 class="section-title">Social stats</h3>
+                    <div class="twitter-facebook-google-container">
+                        <div class="stats-container">
+                            <div class="social-logo-container">
+                                <svg class="social icon icon-twitter"><use xlink:href="sprite/sprite.svg#icon-twitter"/></svg>
+                            </div>
+                            <div class="title-stat-counter">
+                                <h2 class="stat-title">Twitter</h2>
+                                <p class="stat-counter">10,345</p>
+                            </div>
+                        </div>
+                        <div class="stats-container">
+                            <div class="social-logo-container">
+                                <svg class="social icon icon-twitter"><use xlink:href="sprite/sprite.svg#icon-twitter"/></svg>
+                            </div>
+                            <div class="title-stat-counter">
+                                <h2 class="stat-title">Google+</h2>
+                                <p class="stat-counter">8,739</p>
+                            </div>
+                        </div>
+                        <div class="stats-container">
+                            <div class="social-logo-container">
+                                <svg class="social icon icon-twitter"><use xlink:href="sprite/sprite.svg#icon-twitter"/></svg>
+                            </div>
+                            <div class="title-stat-counter">
+                                <h2 class="stat-title">Google+</h2>
+                                <p class="stat-counter">2,530</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
             <section class="recent-activity">
                 <div class="content-wrapper">
-                    <p>Recent activity</p>
+                    <h3 class="section-title">Recent activity</h3>
+                    <div class="members-container">
+                        <img src="images/member-1.jpg" class="profile-image" alt="profile image">
+                        <div class="members-info-display">
+                            <p>Victoria Chambers commented on MyApp's SEO tips</p>
+                            <span>4 hours ago</span>
+                        </div>
+                        <a href="#" class="view-more"><span>></span></a>
+                    </div>
+                    <div class="members-container">
+                        <img src="images/member-2.jpg" class="profile-image" alt="profile image">
+                        <div class="members-info-display">
+                            <p>Dale Byrd like the post Facebook's Change for 2016</p>
+                            <span>5 hours ago</span>
+                        </div>
+                        <a href="#" class="view-more"><span>></span></a>
+                    </div>
+                    <div class="members-container">
+                        <img src="images/member-3.jpg" class="profile-image" alt="profile image">
+                        <div class="members-info-display">
+                            <p>Dawn Wood commented on Facebook's Change for 2016</p>
+                            <span>5 hours ago</span>
+                        </div>
+                        <a href="#" class="view-more"><span>></span></a>
+                    </div>
+                    <div class="members-container" id="last-activity">
+                        <img src="images/member-4.jpg" class="profile-image" alt="profile image">
+                        <div class="members-info-display">
+                            <p>Dan Oliver posted MyApp's SEO tips</p>
+                            <span>1 day ago</span>
+                        </div>
+                        <a href="#" class="view-more"><span>></span></a>
+                    </div>
                 </div>
             </section>
 
+            <section class="new-members">
+                <div class="content-wrapper">
+                    <h3 class="section-title">New members</h3>
+                    <div class="members-container">
+                        <img src="images/member-1.jpg" class="profile-image" alt="profile image">
+                        <div class="members-info-display">
+                            <p>Victoria Chambers</p>
+                            <a href="#">victoria.chambers80@example.com</a>
+                        </div>
+                        <p class="date">10/15/15</p>
+                    </div>
+                    <div class="members-container">
+                        <img src="images/member-2.jpg" class="profile-image" alt="profile image">
+                        <div class="members-info-display">
+                            <p>Dale Byrd</p>
+                            <a href="#">dale.byrd52@example.com</a>
+                        </div>
+                        <p class="date">10/15/15</p>
+                    </div>
+                    <div class="members-container">
+                        <img src="images/member-3.jpg" class="profile-image" alt="profile image">
+                        <div class="members-info-display">
+                            <p>Dawn Wood</p>
+                            <a href="#">dawn.wood16@example.com</a>
+                        </div>
+                        <p class="date">10/15/15</p>
+                    </div>
+                    <div class="members-container" id="last-member">
+                        <img src="images/member-4.jpg" class="profile-image" alt="profile image">
+                        <div class="members-info-display">
+                            <p>Dan Oliver</p>
+                            <a href="#">dan.oliver82@example.com</a>
+                        </div>
+                        <p class="date">10/15/15</p>
+                    </div>
+                </div>
+            </section>
+
+
             <aside class="message-user">
                 <div class="content-wrapper">
-                    <p>Message user</p>
+                    <h3 class="aside-title">Message user</h3>
+                    <div class="message-user-form-container">
+                        <form action="#" id="message-user">
+                            <label for="search-user">
+                                <input type="search" id="search-user" placeholder="Search for User">
+                            </label>
+                            <label for="user_message">
+                                <textarea name="user_message" id="user_message" placeholder="Message for User"></textarea>
+                            </label>
+                            <button type="submit">Send</button>
+                        </form>
+                    </div>
                 </div>
             </aside>
+
             <aside class="settings">
                 <div class="content-wrapper">
-                    <p>Settings</p>
+                    <h3 class="aside-title">Settings</h3>
+
+                    <div class="setting-options">
+                        <div class="toggle-container">
+                            <div  class="toggle-switch-title">
+                                <p>Send Email Notifications</p>
+                            </div>
+                            <div class="email-toggle">
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                    <span class="on"></span><span class="off"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="toggle-container">
+                            <div class="toggle-switch-title">
+                                <p>Set Profile to Public</p>
+                            </div>
+                            <div class="profile-private-toggle">
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                    <span class="on"></span><span class="off"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <form action="">
+                        <div class="timezone-container">
+                            <label for="timezone">
+                            <select class="form-field" id="timezone" required>
+                                <option disabled selected hidden>Select a Timezone</option>
+                                <option>Eastern</option>
+                                <option>Central</option>
+                                <option>Pacific</option>
+                                <option>Mountain</option>
+                                <option>Alaska</option>
+                                <option>Hawaii</option>
+                            </select>
+                            </label>
+                        </div>
+                        <div class="settings-button-container">
+                            <button type="submit">Save</button>
+                            <button type="button" class="settings-cancel-button">Cancel</button>
+                        </div>
+                    </form>
                 </div>
             </aside>
         </main>
