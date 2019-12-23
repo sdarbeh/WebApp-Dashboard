@@ -17,7 +17,7 @@
                 </button>
             </div>
             <div class="logo-container">
-                <a href="#"><p>my logo</p></a>
+                <a href="index.html"><p>my logo</p></a>
             </div>
         </header>
 
@@ -74,25 +74,40 @@
                             <li><a href="#">Monthly</a></li>
                         </ul>
                     </div>
+                    <div class="traffic-chart">
+                        <canvas id="traffic-chart"></canvas>
+                    </div>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam architecto cumque, dicta distinctio dolor eligendi impedit, ipsum laboriosam minima neque odit officiis, rerum saepe similique veniam vero voluptatem voluptatum!</p>
                 </div>
             </section>
 
             <section class="daily-traffic">
                 <div class="content-wrapper">
-                    <h3 class="section-title">Daily traffic</h3>
+                    <div class="section-title-container">
+                        <h3 class="section-title">Daily traffic</h3>
+                    </div>
+                    <div class="daily-traffic-chart">
+                        <canvas id="daily-traffic-chart"></canvas>
+                    </div>
                 </div>
             </section>
 
             <section class="mobile-users">
                 <div class="content-wrapper">
-                    <h3 class="section-title">Mobile users</h3>
+                    <div class="section-title-container">
+                        <h3 class="section-title">Mobile users</h3>
+                    </div>
+                    <div class="mobile-users-chart">
+                        <canvas id="mobile-users-chart"></canvas>
+                    </div>
                 </div>
             </section>
 
             <section class="social-stats">
                 <div class="content-wrapper">
-                    <h3 class="section-title">Social stats</h3>
+                    <div class="section-title-container">
+                        <h3 class="section-title">Social stats</h3>
+                    </div>
                     <div class="twitter-facebook-google-container">
                         <div class="stats-container">
                             <div class="social-logo-container">
@@ -127,7 +142,9 @@
 
             <section class="recent-activity">
                 <div class="content-wrapper">
-                    <h3 class="section-title">Recent activity</h3>
+                    <div class="section-title-container">
+                        <h3 class="section-title">Recent activity</h3>
+                    </div>
                     <div class="members-container">
                         <img src="images/member-1.jpg" class="profile-image" alt="profile image">
                         <div class="members-info-display">
@@ -165,7 +182,9 @@
 
             <section class="new-members">
                 <div class="content-wrapper">
-                    <h3 class="section-title">New members</h3>
+                    <div class="section-title-container">
+                        <h3 class="section-title">New members</h3>
+                    </div>
                     <div class="members-container">
                         <img src="images/member-1.jpg" class="profile-image" alt="profile image">
                         <div class="members-info-display">
@@ -204,7 +223,9 @@
 
             <aside class="message-user">
                 <div class="content-wrapper">
-                    <h3 class="aside-title">Message user</h3>
+                    <div class="aside-title-container">
+                        <h3 class="aside-title">Message user</h3>
+                    </div>
                     <div class="message-user-form-container">
                         <form action="#" id="message-user">
                             <label for="search-user">
@@ -221,12 +242,13 @@
 
             <aside class="settings">
                 <div class="content-wrapper">
-                    <h3 class="aside-title">Settings</h3>
-
+                    <div class="aside-title-container">
+                        <h3 class="aside-title">Settings</h3>
+                    </div>
                     <div class="setting-options">
                         <div class="toggle-container">
-                            <div  class="toggle-switch-title">
-                                <p>Send Email Notifications</p>
+                            <div class="toggle-switch-title-container">
+                                <p class="toggle-switch-title">Send Email Notifications</p>
                             </div>
                             <div class="email-toggle">
                                 <label class="switch">
@@ -237,8 +259,8 @@
                             </div>
                         </div>
                         <div class="toggle-container">
-                            <div class="toggle-switch-title">
-                                <p>Set Profile to Public</p>
+                            <div class="toggle-switch-title-container">
+                                <p class="toggle-switch-title">Set Profile to Public</p>
                             </div>
                             <div class="profile-private-toggle">
                                 <label class="switch">

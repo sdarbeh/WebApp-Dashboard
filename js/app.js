@@ -12,6 +12,7 @@ const mainContent = document.querySelector(".main-content");
 document.querySelector("#default-focus").focus();
 
 
+
 hamburger.addEventListener("click", function() {
     hamburgerMenu();
 });
@@ -45,3 +46,4 @@ alertBox = () => {
         alertMessageBox.style.display  = "none";
     })
 };   alertBox();
+
