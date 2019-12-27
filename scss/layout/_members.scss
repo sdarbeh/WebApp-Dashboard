@@ -1,0 +1,28 @@
+.profile-image {
+  @include circle;
+  width: 40px;
+  height: 40px;
+  margin-right: 15px; }
+#last-activity, #last-member {
+  border-bottom: none; }
+.date {
+  margin-left: auto; }
+.view-more {
+  @include position($pos: absolute, $right: 5%) }
+.members-info-display span, .date, .view-more {
+  color: $color-dark-text; }
+.members-info-display a {
+  color: $color-secondary; }
+form button {
+  width: 100%;
+  border-radius: 5px;
+  border: 0;
+  outline: none;
+  padding: 15px 0 15px 0;
+  transition: 0.3s;
+  cursor: pointer;
+}
+[type="submit"] {
+  background: $color-secondary;
+  margin: 20px 0 20px 0;
+}

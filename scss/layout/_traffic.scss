@@ -1,0 +1,28 @@
+.traffic {
+  border-top: unset; }
+.content-wrapper {
+  padding: 15px;
+  .alert-message-container {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: $color-primary;
+    color: $white;
+    position: relative; }
+  .alert-message {
+    width: 95%;
+    margin: 0;}
+}
+.close {
+  @include position($pos: absolute, $right: 5%);
+  position: absolute;
+  top: 30% !important;}
+.traffic-filter li {
+  display: inline;
+  margin: 0 10px 0 10px; }
+.traffic-filter a:focus {
+  background-color: $color-green;
+  padding: 5px 15px 5px 15px;
+  border-radius: 60px;
+  color: $white;
+  outline: none; }

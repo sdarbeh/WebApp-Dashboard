@@ -1,0 +1,45 @@
+@mixin position (
+  $pos: null,
+  $right: null,
+  $left: null,
+  $bottom: null,
+  $z: null) {
+  position: $pos;
+  top: 0;
+  right: $right;
+  left: $left;
+  z-index: $z;
+}
+@mixin full-page {
+  width: 100%;
+  height: 100vh;
+}
+@mixin circle {
+  border-radius: 50%;
+}
+@mixin flex (
+  $dis: flex,
+  $dir: null,
+  $wrap: null,
+  $just: null,
+  $align: null  ) {
+  display: $dis;
+  flex-direction: $dir;
+  flex-wrap: $wrap;
+  justify-content: $just;
+  align-items: $align;
+}
+
+// Media queries
+@mixin  mq($break) {
+$value: map-get($breakpoints, $break);
+$sm: map_get($breakpoints, "s");
+
+  @if $value < $sm {
+    @media (min-width: $value) {
+      @content;
+    }}
+  @else  {
+    @media (min-width: $value) {
+      @content;
+    }}}

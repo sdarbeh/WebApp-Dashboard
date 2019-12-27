@@ -1,0 +1,12 @@
+header {
+  grid-area: header;
+  height: 50px;
+  width: 100%;
+  background-color: $color-secondary;
+  .icon {
+    width: 30px;
+    height: 30px; }
+  .hamburger {
+    @include position($pos: absolute, $left: 10px, $z: 99999)}
+  .logo-container {
+    @include position($pos: absolute, $left: 40%, $z: 99999);} }

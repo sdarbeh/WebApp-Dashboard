@@ -1,0 +1,13 @@
+.message-user input, .settings select, .message-user textarea, .message-user select {
+  width: 90%;
+  height: 40px;
+  border-radius: 5px;
+  border: $border-darker;
+  outline: none;
+  background: $background-light;
+  margin: 10px 0 10px 0;
+  padding: 5px 5% 5px 5%; }
+textarea {
+  height: 100px !important; }
+.settings select {
+  width: 100%; }

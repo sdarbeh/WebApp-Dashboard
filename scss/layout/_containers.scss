@@ -1,0 +1,67 @@
+.content {
+  grid-area: content; }
+.page-title-search-bar {
+  grid-area: page-title-search-bar;
+  background-color: $color-medium-text;
+  @include flex($align: center, $just: space-between);
+  .page-title-container {
+    background-color: $white;
+    width: 35%;}
+    .page-title {
+      margin: 0;
+      padding: 15px; }
+}
+.search-container {
+  margin-right: 4%;
+  position: relative;
+  width: 50%;
+  .search-bar {
+    outline: none;
+    border: $color-medium-text;
+    border-radius: 5px;
+    padding: 7px 0 7px 10px;
+    width: 100%; }
+  .search-icon {
+    @include position($pos: absolute, $right: 10px );
+    float: right;
+    width: 20px;
+    height: 20px;
+    top: 8px!important;}
+}
+.main-content {
+  background-color: $white; }
+section, aside {
+  border: $border-light; }
+.traffic-container {
+  margin-top: 20px; }
+.stats-container {
+  height: 60px;
+  border: 1px #CFCFCF solid;
+  background-color: #EFEFEF;
+  margin-bottom: 25px;
+  padding: 15px;
+  border-radius: 8px;
+  justify-content: left; }
+.stats-container, .social-logo-container {
+  @include flex($align: center);}
+.social-logo-container {
+  @include circle;
+  width: 55px;
+  height: 55px;
+  background-color: $color-secondary;
+  margin: 0 20px 0 0;
+  justify-content: center;
+  .social {
+    fill: white; }
+}
+.members-container {
+  @include flex($align: center);
+  padding: 10px 0;
+  border-bottom: $border-darker; }
+.settings-button-container {
+  @include flex($align: center, $just: space-between) }
+.toggle-container {
+  @include flex($align: center);
+  margin: 10px 0 10px 0; }
+.toggle-switch-title-container {
+  margin: 0 auto 0 0; }

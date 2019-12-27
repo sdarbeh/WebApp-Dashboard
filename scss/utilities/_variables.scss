@@ -1,0 +1,40 @@
+//Global Colors
+$color-dark-text: #212121;
+$white: #FFFFFF;
+$color-medium-text: #F3F3F3;
+$color-dark-text: #BEBEBE;
+$color-primary: #4d4b72;
+$color-secondary: #7477bf;
+$color-hover: lighten($color-primary, 25%);
+
+$color-green: #85db81;
+$background-light: #EFEFEF;
+$background-accent-shade: #FFFFFF;
+
+//Borders
+$border-light: 1px #F0F0F0 solid;
+$border-dark: 1px #CFCFCF solid;
+$border-darker: 1px #BEBEBE solid;
+
+//Content Colors
+$color-fill: #bbbbbb;
+$color-section-title: #dddddd;
+
+//Content Size
+$size-icon-image: 40px;
+$size-svg-icons: 30px;
+
+//Fonts
+$font-primary: 'Quicksand', sans-serif;
+$font-weight-medium: 500;
+$font-weight-bold: 600;
+//Layout
+$max-width: 1500px;
+
+//Media Query Sizes
+$breakpoints: (
+'s': 320px,
+"m": 768px,
+"l": 1024px,
+);
+
