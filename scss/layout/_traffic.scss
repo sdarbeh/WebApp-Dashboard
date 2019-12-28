@@ -1,5 +1,9 @@
 .traffic {
-  border-top: unset; }
+  border-top: unset;
+  @include mq("m") {
+    grid-area: traffic;
+    border-top: none !important;}
+}
 .content-wrapper {
   padding: 15px;
   .alert-message-container {
@@ -16,7 +20,13 @@
 .close {
   @include position($pos: absolute, $right: 5%);
   position: absolute;
-  top: 30% !important;}
+  top: 30% !important;
+  @include mq("m") {
+    right: 3%;}
+  @include mq("l") {
+    right: 1%;}
+}
+
 .traffic-filter li {
   display: inline;
   margin: 0 10px 0 10px; }

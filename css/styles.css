@@ -499,7 +499,7 @@ input:checked + .slider:after {
     padding: 13px 20px 13px 20px; }
 
   .close {
-    margin-left: 91%; }
+    right: 9%; }
 
   .traffic-container {
     display: flex;
@@ -577,7 +577,7 @@ input:checked + .slider:after {
   .page-title {
     padding: 15px 25px 15px 25px; }
 
-  .traffic, .mobile-users, .social-stats, .recent-activity, .settings {
+  .page-title-search-bar, .traffic, .mobile-users, .social-stats, .recent-activity, .settings {
     border-right: 1px #4d4b72 solid; }
 
   .stats-container {

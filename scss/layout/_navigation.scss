@@ -1,8 +1,19 @@
 .content {
-  grid-area: content; }
+  grid-area: content;
+  @include mq("m") {
+    margin: 0;
+    background-color: $color-primary;}
+}
+
 nav {
   width: 0;
-  display: none; }
+  display: none;
+  @include mq("m") {
+    grid-area: navigation;
+    display: unset;
+    width: unset;}
+}
+
 .menu-expanded {
   @include full-page;
   @include position($pos: fixed, $left: 0, $z: 1);
@@ -10,31 +21,49 @@ nav {
   overflow-x: hidden;
   transition: 0.5s;
   display: unset;}
+
 .navigation-items, .navigation-items-2 {
   text-align: center; }
+
 .navigation-items {
-  padding-top: 80px; }
+  padding-top: 80px;
+  @include mq("m") {
+    padding-top: unset;}
+}
+
 .navigation-items li {
   width: 100%; }
+
 .navigation-items p, .navigation-items-2, .user-name {
   margin: 0 0 10px 0; }
+
 .border {
   width: 50% !important;
   border-bottom: $border-light;
   margin: 0 auto !important;
   padding-bottom: 30px; }
+
 .nav-icon, .profile-pic {
   margin: 20px 0 20px 0;
   fill: $color-medium-text; }
+
 .profile-pic, .alert-icon-light {
   @include circle }
+
 .icon-bell-o, .sign-out p {
   margin-top: 30px; }
+
 .alert-icon-light-relative {
   position: relative; }
+
 .alert-icon-light {
   @include position($pos: absolute, $left: -8px, $z: 999999);
   top: 20% !important;
   width: 8px;
   height: 8px;
   background-color: $color-green; }
+// Icons-bell-o, profile-pic and user-name moved to header on screen size 768px and bigger
+
+
+
+
