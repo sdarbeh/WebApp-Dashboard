@@ -7,50 +7,56 @@ header {
     height: 70px;
     position: relative;
   }
-  .icon {
-    width: 30px;
-    height: 30px; }
   .hamburger {
-    @include position($pos: absolute, $left: 10px, $z: 99999)}
+    @include position($pos: absolute, $left: 0px, $z: 99999)}
   .logo-container {
-    @include position($pos: absolute, $left: 40%, $z: 99999);}
+    @include position($pos: absolute, $left: 40%, $z: 99999);
+    @include mq("m") {
+    left: 2%;}
+    @include mq("l") {
+      left: 20px;} }
 }
+
 // Items moved to header on screen size 768px and bigger
 // Media Queries
 .header-navigation-items {
   @include mq("m") {
     @include position($pos: absolute, $right: 1%);
-    top: 15px!important;
     width: 225px;
-    height: 50px;}
-  @include mq("l") {
-    right: 1%;}
+    height: 100%;
+    .header-navigation-items li, .profile-pic, .user-name, .icon-bell-o {
+        display: inline-block;}
+    .icon-bell-o, .profile-pic, .user-name {
+      @include position($pos: absolute);
+    }
+    .alert-icon-light-relative {
+      position: relative;
+    }
+    .icon-bell-o {
+        margin: 25px 0 0 0;
+        padding-right: 20px;
+        right: 65%;
+        border-right: 1px #404040 solid;
+        height: 25px;
+        width: 25px;}
+    .alert-icon-light {
+        margin-top: 20px;
+        left: 60px; }
+    .profile-pic {
+        top: 25%!important;
+        right: 45%;
+        margin: 0;}
+    .user-name {
+        top: 30%!important;
+        right: 5%;}
+  }
 }
 
-.header-navigation-items li, .profile-pic, .user-name, .icon-bell-o {
-  @include mq("m") {
-    display: inline-block;}
-}
-.icon-bell-o {
-  @include mq("m") {
-    margin: 0 20px 0 20px;
-    padding-right: 20px;
-    border-right: 1px #404040 solid;
-    height: 25px;
-    width: 25px;}
-}
-.alert-icon-light {
-  @include mq("m") {
-    top: -10%;
-    left: -45px; }
-}
-.profile-pic {
-  @include mq("m") {
-    margin: 0;}
-}
-.user-name {
-  @include mq("m") {
-    @include position($pos: absolute);
-    top: 5px!important;
-    margin-left: 10px;}
-}
+
+
+
+
+
+
+
+

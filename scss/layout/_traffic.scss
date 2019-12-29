@@ -1,3 +1,10 @@
+.traffic-container {
+  margin-top: 20px;
+  @include mq("m") {
+    @include flex($align: center);
+    margin: 0 0 20px 0;}
+}
+
 .traffic {
   border-top: unset;
   @include mq("m") {
@@ -5,27 +12,7 @@
     border-top: none !important;}
 }
 .content-wrapper {
-  padding: 15px;
-  .alert-message-container {
-    margin-top: 20px;
-    padding: 20px;
-    border-radius: 5px;
-    background-color: $color-primary;
-    color: $white;
-    position: relative; }
-  .alert-message {
-    width: 95%;
-    margin: 0;}
-}
-.close {
-  @include position($pos: absolute, $right: 5%);
-  position: absolute;
-  top: 30% !important;
-  @include mq("m") {
-    right: 3%;}
-  @include mq("l") {
-    right: 1%;}
-}
+  padding: 15px;}
 
 .traffic-filter li {
   display: inline;

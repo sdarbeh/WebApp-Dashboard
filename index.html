@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>TetraAnalytics Dashboard</title>
     <link rel="icon" type="imgage/png" href="images/favicon.png"/>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="scss/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Quicksand:500,600,700&display=swap" rel="stylesheet"></head>
 <body class="wrapper">
         <header>
-            <div class="burger">
-                <button class="hamburger hamburger--squeeze mobile" type="button">
+            <div class="burger mobile">
+                <button class="hamburger hamburger--squeeze" type="button">
                     <span class="hamburger-box"><span class="hamburger-inner"></span></span>
                 </button>
             </div>
@@ -23,13 +23,13 @@
             <nav>
                 <ul class="navigation-items">
                     <li><a href="#"><svg class="icon nav-icon icon-dashboard"><use xlink:href="sprite/sprite.svg#icon-dashboard"/></svg>
-                        <p>Dashboard</p></a></li>
+                        <p class="mobile">Dashboard</p></a></li>
                     <li><a href="#"><svg class="icon nav-icon icon-users"><use xlink:href="sprite/sprite.svg#icon-users"/></svg>
-                        <p>Members</p></a></li>
+                        <p class="mobile">Members</p></a></li>
                     <li><a href="#"><svg class="icon nav-icon icon-stats-bars"><use xlink:href="sprite/sprite.svg#icon-stats-bars"/></svg>
-                        <p>Analytics</p></a></li>
+                        <p class="mobile">Analytics</p></a></li>
                     <li><a href="#"><svg class="icon nav-icon icon-setting"><use xlink:href="sprite/sprite.svg#icon-setting"/></svg>
-                        <p class="border">Settings</p></a></li>
+                        <p class="border mobile">Settings</p></a></li>
                 </ul>
                 <ul class="navigation-items-2">
                     <li class="alert-icon-light-relative"><a href="#"><svg class="icon nav-icon icon-bell-o"><use xlink:href="sprite/sprite.svg#icon-bell-o"/></svg>
@@ -39,7 +39,6 @@
                     <li class="sign-out mobile"><a href="#">
                         <p>Sign Out</p></a></li>
                 </ul>
-                <div class="navigation-items-separate-line mobile"></div>
             </nav>
             <div class="page-title-search-bar">
                 <div class="page-title-container">
@@ -75,7 +74,6 @@
                     <div class="traffic-chart">
                         <canvas id="traffic-chart"></canvas>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aliquam architecto cumque, dicta distinctio dolor eligendi impedit, ipsum laboriosam minima neque odit officiis, rerum saepe similique veniam vero voluptatem voluptatum!</p>
                 </div>
             </section>
 
@@ -272,15 +270,15 @@
                     <form action="">
                         <div class="timezone-container">
                             <label for="timezone">
-                            <select class="form-field" id="timezone" required>
-                                <option disabled selected hidden>Select a Timezone</option>
-                                <option>Eastern</option>
-                                <option>Central</option>
-                                <option>Pacific</option>
-                                <option>Mountain</option>
-                                <option>Alaska</option>
-                                <option>Hawaii</option>
-                            </select>
+                                <select class="form-field" id="timezone" required>
+                                    <option disabled selected hidden>Select a Timezone</option>
+                                    <option value="-10">(GMT -10:00) Hawaii Standard Time</option>
+                                    <option value="-9">(GMT -9:00) Alaska Standard Time</option>
+                                    <option value="-8">(GMT -8:00) Pacific Standard Time</option>
+                                    <option value="-7">(GMT -7:00) Mountain Standard Time</option>
+                                    <option value="-6">(GMT -6:00) Central Standard Time</option>
+                                    <option value="-5">(GMT -5:00) Eastern Standard Time</option>
+                                </select>
                             </label>
                         </div>
                         <div class="settings-button-container">

@@ -1,0 +1,17 @@
+form button {
+  width: 100%;
+  border-radius: 5px;
+  border: 0;
+  outline: none;
+  padding: 15px 0 15px 0;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+[type="submit"] {
+  background: $color-secondary;
+  margin: 20px 0 20px 0;
+}
+
+.settings-button-container {
+  @include flex($align: center, $just: space-between) }

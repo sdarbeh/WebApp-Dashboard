@@ -18,27 +18,27 @@ hamburger.addEventListener("click", function() {
 });
 
 
-
-
-
-
 // -------- Functions
 tabletMediaQuery = () => {
     const x = window.matchMedia("(min-width: 768px)");
     let headerNavItems = nav.getElementsByTagName("ul")[1];
     let titleSearch = document.querySelector(".page-title-search-bar");
+    let mobileOnly = document.querySelectorAll(".mobile");
     if (x.matches) {
         headerNavItems.classList.remove("navigation-items-2");
         headerNavItems.classList.add("header-navigation-items");
         header.appendChild(headerNavItems);
         mainContent.insertBefore(titleSearch, mainContent.firstChild);
-    }
-};   tabletMediaQuery();
+        for (let i = 0; i < mobileOnly.length; i++) {
+            // removes all elements with class: "mobile"
+            mobileOnly[i].remove() }}};
+tabletMediaQuery();
 
 hamburgerMenu = () => {
     hamburger.classList.toggle("is-active");
     nav.classList.toggle("menu-expanded");
 };
+
 alertBox = () => {
     let close = document.querySelector(".close");
     let alertMessageBox = document.querySelector(".alert-message-container");
@@ -47,3 +47,5 @@ alertBox = () => {
     })
 };   alertBox();
 
+// Charts
+let lineGraph = document.getElementById('traffic-chart').getContext('2d');

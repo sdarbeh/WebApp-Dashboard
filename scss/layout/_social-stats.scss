@@ -1,4 +1,43 @@
 .social-stats .section-title {
   margin-bottom: 30px; }
+.stats-container {
+  height: 60px;
+  width: 100%;
+  border: 1px #CFCFCF solid;
+  background-color: #EFEFEF;
+  margin-bottom: 25px;
+  padding: 15px;
+  border-radius: 8px;
+  justify-content: left;
+  @include mq("m") {
+    width: 27%;
+    margin: 0;}
+  @include mq("l") {
+    width: 29%;
+  }
+}
+.twitter-facebook-google-container {
+  @include flex($just: space-between, $wrap: wrap);
+  height: 100%;
+  width: 100%;
+}
+.stats-container, .social-logo-container {
+   @include flex($align: center);}
+
+.social-logo-container {
+  @include circle;
+  width: 55px;
+  height: 55px;
+  background-color: $color-secondary;
+  margin: 0 20px 0 0;
+  justify-content: center;
+  .social {
+    fill: white; }
+}
+
+.social-logo-container, .title-stat-counter {
+  @include mq("l") {
+    margin-left: 30px;}
+}
 .stat-counter {
   margin: -15px 0 0 0; }

@@ -1,0 +1,52 @@
+.toggle-container {
+  @include flex($align: center);
+  margin: 10px 0 10px 0; }
+
+.toggle-switch-title-container {
+  margin: 0 auto 0 0; }
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 90px;
+  height: 34px; }
+
+.switch input {
+  display: none; }
+
+.slider {
+  @include position($pos: absolute, $left: 0, $right: 0, $bottom: 0);
+  cursor: pointer;
+  background-color: $color-secondary;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  @include position($pos: absolute, $right: 5px, $bottom: 4px);
+  @include circle;
+  top: 3px!important;
+  content: "";
+  height: 28px;
+  width: 28px;
+  background-color: $white;
+  transition: .4s;}
+
+input:checked + .slider {
+  background-color: $color-dark-text; }
+
+input:checked + .slider:before {
+  transform: translateX(-55px); }
+
+.slider:after {
+  @include position($pos: absolute, $left: 50%);
+  content: 'ON';
+  display: block;
+  transform: translate(-50%, -50%);
+  top: 50% !important;}
+
+input:checked + .slider:after {
+  content: 'OFF'; }
+
+.settings-cancel-button {
+  background-color: $color-dark-text; }

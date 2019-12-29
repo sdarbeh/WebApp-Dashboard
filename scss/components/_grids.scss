@@ -3,4 +3,54 @@
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: auto;
-  grid-template-areas: "header" "content" "main-content"; }
+  grid-template-areas: "header" "content" "main-content";
+  @include mq("m") {
+    grid-template-rows: 1fr 100% !important;
+    grid-template-columns: 70px 1fr !important;
+    grid-template-areas: "header header" "content main-content";}
+}
+
+.content {
+  grid-area: content; }
+
+.main-content {
+  background-color: $white;
+  //Media queries
+  @include mq("m") {
+    display: grid;
+    grid-template-rows: 58px repeat(5, 1fr);
+    grid-template-columns: auto;
+    grid-template-areas: "page-title-search-bar page-title-search-bar" "traffic traffic" "daily-traffic mobile-users" "social-stats social-stats" "new-members recent-activity" "message-user settings"; }
+  .daily-traffic, .mobile-users, .new-members, .recent-activity {
+    border-top: $border-mq768-up;
+    border-bottom: $border-mq768-up; }
+  .daily-traffic, .new-members, .message-user {
+    border-right: $border-mq768-up; }
+  .section-title {
+    margin: 0 auto 0 0; }
+  .section-title, .traffic-filter {
+    display: inline-block; }
+  .main-content {
+    grid-area: main-content; }
+  .daily-traffic {
+    grid-area: daily-traffic; }
+  .mobile-users {
+    grid-area: mobile-users; }
+  .social-stats {
+    grid-area: social-stats; }
+  .new-members {
+    grid-area: new-members; }
+  .recent-activity {
+    grid-area: recent-activity; }
+  .message-user {
+    grid-area: message-user; }
+  .settings {
+    grid-area: settings; }
+  // Hidden from page on 768px and higher
+  .mobile, .hamburger, .navigation-items p {
+    display: none !important; }
+  @include mq("l") {
+    .page-title-search-bar, .traffic, .mobile-users, .social-stats, .recent-activity, .settings {
+      border-right: 1px $color-primary solid; }
+  }
+}
