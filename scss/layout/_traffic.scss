@@ -2,7 +2,8 @@
   margin-top: 20px;
   @include mq("m") {
     @include flex($align: center);
-    margin: 0 0 20px 0;}
+    margin: 0 0 20px 0;
+  }
 }
 
 .traffic {
@@ -23,3 +24,14 @@
   border-radius: 60px;
   color: $white;
   outline: none; }
+
+.traffic-chart {
+  height: 250px;
+  padding: 20px;
+  @include mq("m") {
+    height: 200px;
+  }
+  @include mq("l") {
+    height: 300px;
+  }
+}

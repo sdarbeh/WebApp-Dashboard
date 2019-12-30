@@ -8,6 +8,18 @@
   margin: 10px 0 10px 0;
   padding: 5px 5% 5px 5%; }
 
+.message-user {
+  #message-user{
+    margin-top: 25px;}
+  @include mq("l") {
+    .message-user input, .message-user textarea {
+      padding: 15px; }
+    .message-user-form-container button {
+      width: 94%; }
+    .message-user input {
+      height: unset; } }
+}
+
 textarea {
   height: 100px !important; }
 

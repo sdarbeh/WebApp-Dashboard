@@ -1,9 +1,10 @@
-.message-user {
+.mobile-users-chart {
+  height: 200px;
+  padding: 20px;
+  @include mq("m") {
+    height: 150px;
+  }
   @include mq("l") {
-    .message-user input, .message-user textarea {
-      padding: 15px; }
-    .message-user-form-container button {
-      width: 94%; }
-    .message-user input {
-      height: unset; } }
+    height: 300px;
+  }
 }

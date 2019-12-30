@@ -16,13 +16,14 @@
 
 .members-container {
   position: relative;
+  height: 75px;
   @include flex($align: center);
   padding: 10px 0;
   border-bottom: $border-darker; }
 
 .view-more {
   @include position($pos: absolute, $right: 5%);
-  top: 50% !important;
+  top: 40% !important;
 }
 
 .members-info-display span, .date, .view-more {

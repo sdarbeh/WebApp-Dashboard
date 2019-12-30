@@ -4,6 +4,10 @@ body, header {
     margin: 0 auto;}
 }
 
+//.traffic, .daily-traffic, .mobile-users, .social-stats, .recent-activity, .new-members, .message-user, .settings {
+//  height: min-content;
+//}
+
 .content-wrapper {
   @include mq("m") {
     padding: 25px 18px 25px 25px;
@@ -13,11 +17,18 @@ body, header {
 }
 
 .page-title-container {
+  background-color: $white;
+  width: 35%;
+  .page-title {
+    margin: 0;
+    padding: 15px;}
   @include mq("m") {
     padding-top: 8px;
     padding-bottom: 8px;
     height: 41px;
-    width: 20%;
+    width: 19%;
+    .page-title {
+      padding: 15px 25px 15px 25px;}
   }
   @include mq("l") {
     width: 10%;}
@@ -27,21 +38,6 @@ body, header {
   grid-area: page-title-search-bar;
   background-color: $color-medium-text;
   @include flex($align: center, $just: space-between);
-  .page-title-container {
-    background-color: $white;
-    width: 35%;
-    @include mq("m") {
-      padding-top: 8px;
-      padding-bottom: 8px;
-      height: 41px;
-      width: 20%;}
-  }
-    .page-title {
-      margin: 0;
-      padding: 15px;
-      @include mq("l") {
-        padding: 15px 25px 15px 25px;}
-    }
 }
 
 .search-container {
@@ -77,4 +73,8 @@ section, aside {
   @include mq("m") {
     // Hidden from page on 768px and higher
     border: unset;}
+}
+
+.chart-container {
+    margin: 30px 0 0 0;
 }
