@@ -6,12 +6,19 @@ form button {
   padding: 15px 0 15px 0;
   transition: 0.3s;
   cursor: pointer;
+  color: white;
+  text-transform: uppercase;
 }
+
+.submit-button:hover {
+  background-color: darken($color-secondary, 15%); }
 
 [type="submit"] {
   background: $color-secondary;
-  margin: 20px 0 20px 0;
-}
+  margin: 20px 0 20px 0; }
 
 .settings-button-container {
   @include flex($align: center, $just: space-between) }
+
+.settings-cancel-button {
+  background-color: $background-dark; }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>TetraAnalytics Dashboard</title>
-    <link rel="icon" type="imgage/png" href="images/favicon.png"/>
+    <link rel="icon" type="imgage/png" href="images/logo.png"/>
     <link rel="stylesheet" href="scss/styles.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>    <link href="https://fonts.googleapis.com/css?family=Quicksand:500,600,700&display=swap" rel="stylesheet"></head>
 <body class="wrapper">
@@ -15,7 +15,7 @@
                 </button>
             </div>
             <div class="logo-container">
-                <a href="index.html"><p>my logo</p></a>
+                <a href="index.html"><img class="logo" src="images/logo.png" alt="logo"></a>
             </div>
         </header>
 
@@ -65,10 +65,10 @@
                     <div class="traffic-container">
                         <h3 class="section-title">Traffic</h3>
                         <ul class="traffic-filter">
-                            <li><a href="#">Hourly</a></li>
-                            <li><a href="#">Daily</a></li>
-                            <li><a href="#" id="default-focus">Weekly</a></li>
-                            <li><a href="#">Monthly</a></li>
+                            <li><a href="#" class="traffic-options">Hourly</a></li>
+                            <li><a href="#" class="traffic-options">Daily</a></li>
+                            <li><a href="#" class="traffic-options">Weekly</a></li>
+                            <li><a href="#" class="traffic-options">Monthly</a></li>
                         </ul>
                     </div>
                     <div class="traffic-chart chart-container">
@@ -116,16 +116,16 @@
                         </div>
                         <div class="stats-container">
                             <div class="social-logo-container">
-                                <svg class="social icon icon-twitter"><use xlink:href="sprite/sprite.svg#icon-twitter"/></svg>
+                                <svg class="social icon icon-twitter"><use xlink:href="sprite/sprite.svg#icon-facebook"/></svg>
                             </div>
                             <div class="title-stat-counter">
-                                <h2 class="stat-title">Google+</h2>
+                                <h2 class="stat-title">Facebook</h2>
                                 <p class="stat-counter">8,739</p>
                             </div>
                         </div>
                         <div class="stats-container">
                             <div class="social-logo-container">
-                                <svg class="social icon icon-twitter"><use xlink:href="sprite/sprite.svg#icon-twitter"/></svg>
+                                <svg class="social icon icon-twitter"><use xlink:href="sprite/sprite.svg#icon-google"/></svg>
                             </div>
                             <div class="title-stat-counter">
                                 <h2 class="stat-title">Google+</h2>
@@ -230,7 +230,7 @@
                             <label for="user_message">
                                 <textarea name="user_message" id="user_message" placeholder="Message for User"></textarea>
                             </label>
-                            <button type="submit">Send</button>
+                            <button type="submit" class="submit-button">Send</button>
                         </form>
                     </div>
                 </div>
@@ -282,7 +282,7 @@
                             </label>
                         </div>
                         <div class="settings-button-container">
-                            <button type="submit">Save</button>
+                            <button type="submit" class="submit-button">Save</button>
                             <button type="button" class="settings-cancel-button">Cancel</button>
                         </div>
                     </form>

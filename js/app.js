@@ -1,17 +1,11 @@
-const hamburger = document.querySelector(".hamburger");
 const nav = document.querySelector("nav");
-const userName = document.querySelector(".user-name");
-const userProfilePic = document.querySelector(".profile-pic");
-const logo = document.querySelector(".logo-container");
-const header = document.querySelector("header");
+const hamburger = document.querySelector(".hamburger");
 const alertIcon = document.querySelector(".icon-bell-o");
 const alertIconLight = document.querySelector(".alert-icon-light");
-const mainContent = document.querySelector(".main-content");
 
-
-document.querySelector("#default-focus").focus();
-
-
+alertIcon.onmouseover = () => {
+    alertIconLight.classList.toggle("shake");
+};
 
 hamburger.addEventListener("click", function() {
     hamburgerMenu();
@@ -21,6 +15,8 @@ hamburger.addEventListener("click", function() {
 // -------- Functions
 tabletMediaQuery = () => {
     const x = window.matchMedia("(min-width: 768px)");
+    const header = document.querySelector("header");
+    const mainContent = document.querySelector(".main-content");
     let headerNavItems = nav.getElementsByTagName("ul")[1];
     let titleSearch = document.querySelector(".page-title-search-bar");
     let mobileOnly = document.querySelectorAll(".mobile");
@@ -45,7 +41,16 @@ alertBox = () => {
     close.addEventListener("click", () => {
         alertMessageBox.style.display  = "none";
     })
-};   alertBox();
+}; alertBox();
+
+trafficFilterFocus = () => {
+    let options = document.querySelectorAll(".traffic-options");
+    for (let i = 0; i < options.length; i++) {
+        options[i].addEventListener("click", ()=> {
+            options[i].classList.toggle("filter-active");
+        })
+    }
+}; trafficFilterFocus();
 
 // Charts
 let lineGraph = document.querySelector('#traffic-chart').getContext('2d');
@@ -61,53 +66,45 @@ let trafficLine = new Chart(lineGraph, {
             lineTension: 0,
             pointBackgroundColor: "#FFFFFF",
             pointBorderColor: "#7477bf",
+            pointHoverBackgroundColor: '#7477bf',
             pointBorderWidth: 2,
             pointRadius: 4,
-            data: [750, 1250, 1000, 1500, 2000, 1500, 1750, 1250, 1750, 2250, 1750, 2250]
-        }]},
+            data: [750, 1250, 1000, 1500, 2000, 1500, 1750, 1250, 1750, 2250, 1750, 2250] }]},
     options: {
         responsive: true,
         maintainAspectRatio: false,
-        scales: {
-            yAxes: [{ stacked: true,  }],
-            legend: { display: false },}
-    }
-});
+        legend: { position: 'none' },
+        scales: { yAxes: [{ stacked: true,  }], }} });
 
 let BarChart = document.querySelector('#daily-traffic-chart').getContext('2d');
-var DailyTrafficChart = new Chart(BarChart, {
+let DailyTrafficChart = new Chart(BarChart, {
     type: 'bar',
     data:  {
         labels: ['S','M', 'T', 'W', 'T', 'F', 'S'],
         datasets: [{
             label: 'Daily Traffic',
             backgroundColor: '#7477bf',
-            data: [50, 100, 175, 125, 275, 200, 100]
-        }]
-    },
+            hoverBackgroundColor: "#4d4b72",
+            data: [50, 100, 175, 125, 275, 200, 100] }] },
     options: {
         responsive: true,
         maintainAspectRatio: false,
+        legend: { position: 'none' },
         scales: {
-            yAxes: [{ stacked: true,  }],
-            legend: { display: false },}
-    }
-});
+            yAxes: [{ stacked: true,  }], } } });
 
-var pieGraph = document.querySelector('#mobile-users-chart').getContext('2d');
-var mobileUserChart = new Chart(pieGraph, {
+let pieGraph = document.querySelector('#mobile-users-chart').getContext('2d');
+let mobileUserChart = new Chart(pieGraph, {
     type: 'doughnut',
     data:  {
         labels: ['Phones','Tablets','Desktop'],
         datasets: [{
             label: 'My First dataset',
             backgroundColor: ['#81c98f', '#74B1BF','#7477bf'],
-            data: [15,15,75],
-            borderWidth: 0,
-        }]
-    },
+            data: [18,15,75],
+            borderWidth: 0, }] },
     options: {
+        legend: { position: 'right', },
         responsive: true,
-        maintainAspectRatio: false,
-    }
-});
+        maintainAspectRatio: false, } });
+Chart.defaults.global.defaultFontColor='#BEBEBE';

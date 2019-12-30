@@ -10,11 +10,13 @@ header {
   .hamburger {
     @include position($pos: absolute, $left: 0px, $z: 99999)}
   .logo-container {
-    @include position($pos: absolute, $left: 40%, $z: 99999);
+    @include position($pos: absolute, $left: 45%, $z: 99999);
+    top: 4px!important;
     @include mq("m") {
+      top: 10px !important;
     left: 2%;}
     @include mq("l") {
-      left: 20px;} }
+      left: 12px;} }
 }
 
 // Items moved to header on screen size 768px and bigger
@@ -48,8 +50,7 @@ header {
         margin: 0;}
     .user-name {
         top: 30%!important;
-        right: 5%;}
-  }
+        right: 5%;} }
 }
 
 

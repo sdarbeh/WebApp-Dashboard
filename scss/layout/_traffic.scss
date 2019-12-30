@@ -1,37 +1,37 @@
-.traffic-container {
-  margin-top: 20px;
-  @include mq("m") {
-    @include flex($align: center);
-    margin: 0 0 20px 0;
-  }
-}
-
 .traffic {
   border-top: unset;
   @include mq("m") {
     grid-area: traffic;
-    border-top: none !important;}
-}
+    border-top: none !important;} }
+
 .content-wrapper {
-  padding: 15px;}
+  padding: 15px; }
+
+.traffic-container {
+  margin-top: 20px;
+  .traffic-filter {
+    margin: 20px 0 0 20px;}
+  @include mq("m") {
+    @include flex($align: center);
+    margin: 0 0 20px 0;
+    .traffic-filter {
+      margin: unset; }} }
 
 .traffic-filter li {
   display: inline;
   margin: 0 10px 0 10px; }
-.traffic-filter a:focus {
+
+.filter-active {
   background-color: $color-green;
   padding: 5px 15px 5px 15px;
   border-radius: 60px;
-  color: $white;
+  color: $white!important;
   outline: none; }
 
 .traffic-chart {
   height: 250px;
-  padding: 20px;
+  padding: 0 20px 0 20px;
   @include mq("m") {
-    height: 200px;
-  }
+    height: 200px; }
   @include mq("l") {
-    height: 300px;
-  }
-}
+    height: 300px; } }

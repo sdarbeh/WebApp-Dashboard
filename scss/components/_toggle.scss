@@ -47,6 +47,3 @@ input:checked + .slider:before {
 
 input:checked + .slider:after {
   content: 'OFF'; }
-
-.settings-cancel-button {
-  background-color: $color-dark-text; }

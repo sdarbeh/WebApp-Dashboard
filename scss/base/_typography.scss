@@ -1,50 +1,63 @@
 .wrapper {
   font-family: $font-primary; }
+
 a {
   color: #F2F2F2;
   text-decoration: none;
   font-weight: 600; }
+
 .logo-container {
   font-weight: 700; }
+
 .user-name {
   font-weight: 600;
   font-size: 1em; }
+
 .page-title, .section-title, .aside-title {
   font-size: 1rem;
   font-weight: 500; }
+
 .alert-message {
   font-size: 0.8rem; }
+
 .alert-message span {
   font-weight: 700; }
+
 .close {
   font-weight: 700; }
+
 .section-title, .aside-title {
   text-transform: uppercase; }
+
 .traffic-filter {
   text-align: center; }
+
 .traffic-filter a {
-  color: unset;
+  color: $color-dark-text;
   font-weight: unset;
   font-size: 0.9rem; }
+
 .stat-title {
   font-size: unset;
   color: #7477bf; }
+
 .stat-counter {
   font-size: 2rem;}
+
 .members-container {
   font-size: 0.9rem;}
+
 .view-more {
   font-weight: 700;
   font-size: 1.2rem;}
+
 .members-info-display span, .members-info-display a {
   font-size: .8rem; }
-form button {
-  outline: none;
-  color: white;
-  text-transform: uppercase;}
+
 ::placeholder, select:invalid {
   font-size: .9em;
   color: #BEBEBE; }
+
 .slider:after {
   color: $white;
   font-size: 10px; }

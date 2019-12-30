@@ -1,6 +1,6 @@
 .daily-traffic-chart {
   height: 200px;
-  padding: 20px;
+  padding: 0 20px 0 20px;
   @include mq("m") {
     height: 150px;
   }

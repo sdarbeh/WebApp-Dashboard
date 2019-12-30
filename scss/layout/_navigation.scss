@@ -47,6 +47,9 @@ nav {
 .nav-icon, .profile-pic {
   margin: 20px 0 20px 0;
   fill: $color-medium-text; }
+.user-name {
+  color: $color-light-text;
+}
 
 .profile-pic, .alert-icon-light {
   @include circle }

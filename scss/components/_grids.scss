@@ -1,3 +1,7 @@
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
 .wrapper {
   font-family: $font-primary;
   display: grid;
@@ -20,7 +24,7 @@
     display: grid;
     //grid-template-rows: 58px repeat(5, 1fr);
     grid-template-rows: 58px 375px 250px 190px minmax(450px, auto) 1fr;
-    grid-template-columns: auto;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas: "page-title-search-bar page-title-search-bar" "traffic traffic" "daily-traffic mobile-users" "social-stats social-stats" "new-members recent-activity" "message-user settings"; }
   .daily-traffic, .mobile-users, .new-members, .recent-activity {
     border-top: $border-mq768-up;

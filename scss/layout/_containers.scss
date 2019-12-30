@@ -4,10 +4,6 @@ body, header {
     margin: 0 auto;}
 }
 
-//.traffic, .daily-traffic, .mobile-users, .social-stats, .recent-activity, .new-members, .message-user, .settings {
-//  height: min-content;
-//}
-
 .content-wrapper {
   @include mq("m") {
     padding: 25px 18px 25px 25px;
@@ -36,7 +32,7 @@ body, header {
 
 .page-title-search-bar {
   grid-area: page-title-search-bar;
-  background-color: $color-medium-text;
+  background-color: $background-light;
   @include flex($align: center, $just: space-between);
 }
 
@@ -53,7 +49,7 @@ body, header {
   }
   .search-bar {
     outline: none;
-    border: $color-medium-text;
+    border: $border-dark;
     border-radius: 5px;
     padding: 7px 0 7px 10px;
     width: 100%; }
@@ -71,10 +67,8 @@ body, header {
 section, aside {
   border: $border-light;
   @include mq("m") {
-    // Hidden from page on 768px and higher
     border: unset;}
 }
 
 .chart-container {
-    margin: 30px 0 0 0;
-}
+    margin: 30px 0 0 0;}
