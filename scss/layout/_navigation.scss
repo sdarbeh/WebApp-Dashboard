@@ -68,4 +68,58 @@ nav {
   width: 8px;
   height: 8px;
   background-color: $color-green; }
-// Icons-bell-o, profile-pic and user-name moved to header on screen size 768px and bigger
+
+.alert-pop-up-title {
+  margin-top: 0;
+}
+
+.alert-pop-up {
+  display: none;
+  .alert-content {
+    @include flex($just: space-between, $dir: column);
+  }
+  & li {
+    @include flex($align: center, $just: space-between);
+    padding: 10px 0 10px 0;
+    border-bottom: $border-darker;
+  }
+  & li:last-child {
+    margin-bottom: 20px;
+    border-bottom: none;
+  }
+  .alert-pop-up-close {
+    background-color: $color-secondary;
+  }
+}
+.alert-pop-up a {
+  color: #74B1BF;
+}
+.pop-up-active {
+  display: unset;
+  @include position($pos: absolute, $right: 3%);
+  top: 19% !important;
+  padding: 25px;
+  background-color: #f1f1f1;
+  width: 80%;
+  min-height: min-content;
+  max-height: 60%;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  border-radius: 10px;
+  z-index: 9999999;
+}
+.empty-notification {
+  @include flex($align: center, $just: center, $wrap:wrap);
+  margin: 30px auto 20px auto;
+  width: min-content;
+  .empty-icon-container {
+    @include flex($align: center, $just: center);
+    @include circle;
+    width: 150px;
+    height: 150px;
+    background-color: lighten($background-dark, 15);
+  }
+  .empty-message {
+    margin: 20px 0 0 0;
+  }
+}
+// Icons-bell-o, alert-pop-up, profile-pic and user-name moved to _header on screen size 768px and bigger

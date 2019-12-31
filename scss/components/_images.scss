@@ -1,19 +1,31 @@
-.icon {
-  width: 30px;
-  height: 30px; }
+.icon, .notification-icon {
+  width: $size-svg-icons;
+  height: $size-svg-icons; }
 
 .logo {
-  width: 35px;
-  height: 35px;
+  width: $size-logo-mobile;
+  height: $size-logo-mobile;
   opacity: .5;
   @include mq("m") {
-    width: 45px;
-    height: 45px;
+    width: $size-logo-regular;
+    height: $size-logo-regular;
   }
 }
 
 .profile-image {
   @include circle;
-  width: 40px;
-  height: 40px;
+  cursor: pointer;
+  width: $size-icon-image;
+  height: $size-icon-image;
   margin-right: 15px; }
+
+.notification-icon {
+  fill: $color-medium-text;
+  cursor: pointer;
+}
+// Empty notification pop-up
+.empty-icon {
+  width: 80px;
+  height: 100px;
+  fill: $white;
+}

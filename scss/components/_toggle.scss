@@ -33,7 +33,7 @@
   transition: .4s;}
 
 input:checked + .slider {
-  background-color: $color-dark-text; }
+  background-color: $color-medium-text; }
 
 input:checked + .slider:before {
   transform: translateX(-55px); }

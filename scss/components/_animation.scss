@@ -2,9 +2,16 @@
   animation:spin 5s linear infinite;
 }@keyframes spin { 100% { transform:rotate(360deg); } }
 
- .icon-bell-o:hover {
+ .icon-bell-o:hover, .icon:hover {
    fill: $white;
  }
+
+ .notification-icon:hover {
+   fill: $color-green;
+ }
+
+.submit-button:hover, .alert-pop-up-close:hover  {
+  background-color: darken($color-secondary, 15%); }
 
 .shake {
   animation:shake 2s linear infinite;

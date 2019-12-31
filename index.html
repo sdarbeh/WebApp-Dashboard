@@ -10,9 +10,9 @@
 <body class="wrapper">
         <header>
             <div class="burger mobile">
-                <button class="hamburger hamburger--squeeze" type="button">
+                <div class="hamburger hamburger--squeeze" type="button">
                     <span class="hamburger-box"><span class="hamburger-inner"></span></span>
-                </button>
+                </div>
             </div>
             <div class="logo-container">
                 <a href="index.html"><img class="logo" src="images/logo.png" alt="logo"></a>
@@ -40,6 +40,32 @@
                         <p>Sign Out</p></a></li>
                 </ul>
             </nav>
+            <div class="alert-pop-up">
+                <div class="alert-pop-up-title-container">
+                    <h2 class="alert-pop-up-title">Notifications</h2>
+                </div>
+                <div class="alert-content">
+                    <ul class="dropdown-content">
+                        <li class="notification-content">
+                            <p class="notification-message"><a href="#">Dale Byrd</a> sent you a friend request</p>
+                            <span class="notification-type"><svg class="notification-icon"><use xlink:href="sprite/sprite.svg#icon-check"/></svg></span>
+                        </li>
+                        <li class="notification-content">
+                            <p class="notification-message"><strong>Reminder: </strong>Project due on Jan 5th!</p>
+                            <span class="notification-type"><svg class="notification-icon"><use xlink:href="sprite/sprite.svg#icon-check"/></svg></span>
+                        </li>
+                        <li class="notification-content">
+                            <p class="notification-message">2 new messages from <a href="">Victoria Chambers</a></p>
+                            <span class="notification-type"><svg class="notification-icon"><use xlink:href="sprite/sprite.svg#icon-check"/></svg></span>
+                        </li>
+                        <li class="notification-content">
+                            <p class="notification-message">Monthly traffic increased by 23%</p>
+                            <span class="notification-type"><svg class="notification-icon"><use xlink:href="sprite/sprite.svg#icon-check"/></svg></span>
+                        </li>
+                    </ul>
+                    <button class="alert-pop-up-close">Close</button>
+                </div>
+            </div>
             <div class="page-title-search-bar">
                 <div class="page-title-container">
                     <h1 class="page-title">Dashboard</h1>
@@ -59,7 +85,7 @@
             <section class="traffic">
                 <div class="content-wrapper">
                     <div class="alert-message-container">
-                        <p class="alert-message"><span>Alert&nbsp</span>&nbspYou have 4 unopened messages</p>
+                        <p class="alert-message"><span>Alert&nbsp</span>&nbspYou have <span class="notification-number"></span> unopened messages</p>
                         <a href="#"><span class="close">X</span></a>
                     </div>
                     <div class="traffic-container">
@@ -75,8 +101,8 @@
                         <canvas width="100%" height="100%" id="traffic-chart"></canvas>
                     </div>
                 </div>
-            </section>
 
+            </section>
             <section class="daily-traffic">
                 <div class="content-wrapper">
                     <div class="section-title-container">
@@ -87,7 +113,6 @@
                     </div>
                 </div>
             </section>
-
             <section class="mobile-users">
                 <div class="content-wrapper">
                     <div class="section-title-container">
@@ -215,7 +240,6 @@
                     </div>
                 </div>
             </section>
-
 
             <aside class="message-user">
                 <div class="content-wrapper">

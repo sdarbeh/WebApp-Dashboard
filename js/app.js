@@ -52,6 +52,34 @@ trafficFilterFocus = () => {
     }
 }; trafficFilterFocus();
 
+popUpBox = () => {
+    let popUpBox = document.querySelector(".alert-pop-up");
+    let parent = document.querySelector(".dropdown-content");
+    let notification = document.querySelectorAll(".notification-content");
+    let viewed = document.querySelectorAll(".notification-icon");
+    let close = document.querySelector(".alert-pop-up-close");
+    let notificationAmount = document.querySelector(".notification-numbe");
+
+    alertIcon.addEventListener("click", () => {
+        popUpBox.classList.toggle("pop-up-active")
+    });
+    for (let i = 0; i < notification.length; i++) {
+        viewed[i].addEventListener("click", () => {
+            notification[i].remove();
+            // notificationAmount.innerHTML = parent.children.length;
+            console.log(parent.childElementCount);
+            if (parent.childElementCount === 0) {
+                let div = document.createElement('div');
+                div.innerHTML = "    <div class=\"empty-notification\"><div class=\"empty-icon-container\"><svg class=\"empty-icon\"><use xlink:href=\"sprite/sprite.svg#icon-frown\"/></svg></div><p class=\"empty-message\">Wow, such empty</p></div>\n";
+                popUpBox.insertBefore(div, popUpBox.children[1]);
+                alertIconLight.style.display = "none";
+            }
+        })}
+    close.addEventListener("click", () => {
+        popUpBox.classList.toggle("pop-up-active")
+    })
+}; popUpBox();
+
 // Charts
 let lineGraph = document.querySelector('#traffic-chart').getContext('2d');
 let trafficLine = new Chart(lineGraph, {
