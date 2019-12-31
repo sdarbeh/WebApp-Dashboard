@@ -794,7 +794,7 @@ input:checked + .slider:after {
         padding: 15px 25px 15px 25px; } }
   @media (min-width: 1024px) {
     .page-title-container {
-      width: 10%; } }
+      width: 13%; } }
 
 .page-title-search-bar {
   grid-area: page-title-search-bar;
