@@ -33,7 +33,7 @@ a {
   text-align: center; }
 
 .traffic-filter a {
-  color: #212121;
+  color: #848484;
   font-weight: unset;
   font-size: 0.9rem; }
 
@@ -588,7 +588,7 @@ button {
 .notification-icon:hover {
   fill: #81c98f; }
 
-.submit-button:hover, .alert-pop-up-close:hover {
+.submit-button:hover {
   background-color: #494c9e; }
 
 .shake {
@@ -936,7 +936,7 @@ header {
   top: 40% !important; }
 
 .members-info-display span, .date, .view-more {
-  color: #212121; }
+  color: #848484; }
 
 .members-info-display a {
   color: #7477bf; }
@@ -1066,6 +1066,16 @@ nav {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   z-index: 9999999; }
+  @media (min-width: 768px) {
+    .pop-up-active {
+      top: 7% !important;
+      width: 40%;
+      right: 19%; } }
+  @media (min-width: 1024px) {
+    .pop-up-active {
+      top: 8% !important;
+      width: 25%;
+      right: 12%; } }
 
 .empty-notification {
   display: flex;
@@ -1205,5 +1215,8 @@ textarea {
   @media (min-width: 1024px) {
     .traffic-chart {
       height: 300px; } }
+
+.traffic-chart-hourly, .traffic-chart-daily, .traffic-chart-monthly {
+  display: none; }
 
 /*# sourceMappingURL=styles.css.map */

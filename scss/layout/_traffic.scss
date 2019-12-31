@@ -35,3 +35,6 @@
     height: 200px; }
   @include mq("l") {
     height: 300px; } }
+
+.traffic-chart-hourly, .traffic-chart-daily, .traffic-chart-monthly {
+  display: none;}
