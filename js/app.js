@@ -4,24 +4,36 @@ const alertIcon = document.querySelector(".icon-bell-o");
 const alertIconLight = document.querySelector(".alert-icon-light");
 let alertMessageBox = document.querySelector(".alert-message-container");
 const mqMedium = window.matchMedia("(min-width: 768px)");
+let notificationAmount = document.querySelector(".notification-number");
+let parent = document.querySelector(".dropdown-content");
+let themePicker = document.querySelector(".theme-picker");
+let paletteContainer = document.querySelector(".palette-container");
 
-alertIcon.onmouseover = () => {
-    alertIconLight.classList.toggle("shake");
+window.onload = () => {
+    // displays number of notifications in alert box
+    notificationAmount.innerHTML = parent.childElementCount.toString();
+    // toggles classes to hamburger and nav - allows mobile functions
+    hamburger.addEventListener("click", function() {
+        hamburgerMenu(); });
+    // shaking alert green icon
+    alertIcon.onmouseover = () => {
+        alertIconLight.classList.toggle("shake"); };
+    // Functions
+    mediaQMedium();
+    popUpBox();
+    alertBox();
+    trafficFilterFocus();
+    chartFilter();
 };
-
-hamburger.addEventListener("click", function() {
-    hamburgerMenu();
-});
-
-
 // -------- Functions
-tabletMediaQuery = () => {
+mediaQMedium = () => {
     const header = document.querySelector("header");
     const mainContent = document.querySelector(".main-content");
     let headerNavItems = nav.getElementsByTagName("ul")[1];
     let titleSearch = document.querySelector(".page-title-search-bar");
     let mobileOnly = document.querySelectorAll(".mobile");
     if (mqMedium.matches) {
+        // ---------  affects on screen sizes 768px and up -------- //
         headerNavItems.classList.remove("navigation-items-2");
         headerNavItems.classList.add("header-navigation-items");
         header.appendChild(headerNavItems);
@@ -29,44 +41,38 @@ tabletMediaQuery = () => {
         for (let i = 0; i < mobileOnly.length; i++) {
             // removes all elements with class: "mobile"
             mobileOnly[i].remove() }}};
-tabletMediaQuery();
 
 hamburgerMenu = () => {
     hamburger.classList.toggle("is-active");
     nav.classList.toggle("menu-expanded");
-};
+    paletteContainer.classList.toggle("show-palette");};
 
 alertBox = () => {
     let close = document.querySelector(".close");
     close.addEventListener("click", () => {
         alertGoAway();
-    })
-}; alertBox();
+    }) };
 
 trafficFilterFocus = () => {
     let options = document.querySelectorAll(".traffic-options");
     for (let i = 0; i < options.length; i++) {
         options[i].addEventListener("click", ()=> {
             options[i].classList.toggle("filter-active");
-        })
-    }
-}; trafficFilterFocus();
+        }) } };
 
 popUpBox = () => {
     let popUpBox = document.querySelector(".alert-pop-up");
-    let parent = document.querySelector(".dropdown-content");
     let notification = document.querySelectorAll(".notification-content");
     let viewed = document.querySelectorAll(".notification-icon");
     let close = document.querySelector(".alert-pop-up-close");
-    let notificationAmount = document.querySelector(".notification-number");
+    // opens notification pop-up box
     alertIcon.addEventListener("click", () => {
         popUpBox.classList.toggle("pop-up-active")
     });
     for (let i = 0; i < notification.length; i++) {
         viewed[i].addEventListener("click", () => {
             notification[i].remove();
-            notificationAmount.innerHTML = parent.children.length.toString();
-            console.log(parent.childElementCount);
+            notificationAmount.innerHTML = parent.childElementCount.toString();
             if (parent.childElementCount === 0) {
                 let div = document.createElement('div');
                 div.innerHTML = "<div class=\"empty-notification\"><div class=\"empty-icon-container\"><svg class=\"empty-icon\"><use xlink:href=\"sprite/sprite.svg#icon-frown\"/></svg></div><p class=\"empty-message\">Wow, such empty</p></div>\n";
@@ -76,24 +82,23 @@ popUpBox = () => {
         })}
     close.addEventListener("click", () => {
         popUpBox.classList.toggle("pop-up-active")
-    })
-}; popUpBox();
+    });
+};
 
 chartFilter = () => {
     let options = document.querySelectorAll(".traffic-options");
     for (let i = 0; i < options.length; i++) {
         options[i].addEventListener("click", ()=> {
             console.log(options[i]);
-        })
-    }
-}; chartFilter();
+        }) } };
 
 alertGoAway = () => {
     let mainContent = document.querySelector('.main-content');
     const mqLarge = window.matchMedia("(min-width: 1024px)");
     alertMessageBox.style.display = "none";
-    if (mqMedium.matches) {mainContent.style.gridTemplateRows = "58px 290px 250px 190px minmax(450px, auto) 1fr"}
-    if (mqLarge.matches) {mainContent.style.gridTemplateRows = "58px 390px 400px 190px minmax(450px, auto) 1fr"}};
+    if (mqMedium.matches) {mainContent.style.gridTemplateRows = "58px 290px 250px 190px minmax(450px, auto) 1fr"
+    } if (mqLarge.matches) {mainContent.style.gridTemplateRows = "58px 390px 400px 190px minmax(450px, auto) 1fr"}
+};
 
 // Charts
 // ----------------------------------------  LINE GRAPHS ------------------------------------------------------

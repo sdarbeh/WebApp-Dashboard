@@ -7,7 +7,8 @@ $color-primary: #4d4b72;
 $color-secondary: #7477bf;
 $color-hover: lighten($color-primary, 25%);
 
-$color-green: #81c98f;
+$secondary-light: #81c98f;
+$secondary-dark: #74B1BF;
 $background-light: #EFEFEF;
 $background-dark: #BEBEBE;
 $background-accent-shade: #FFFFFF;
@@ -36,5 +37,7 @@ $breakpoints: (
 's': 320px,
 "m": 768px,
 "l": 1024px,
+"xl": 1200px,
+"max-width": 1500px,
 );
 

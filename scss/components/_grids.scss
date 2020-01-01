@@ -56,6 +56,6 @@ html {
   @include mq("l") {
     grid-template-rows: 58px 475px 400px 190px minmax(450px, auto) 1fr;
     .page-title-search-bar, .traffic, .mobile-users, .social-stats, .recent-activity, .settings {
-      border-right: 1px $color-primary solid; }
+      border-right: 1px $color-secondary solid; }
   }
 }

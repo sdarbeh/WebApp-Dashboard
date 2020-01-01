@@ -588,6 +588,9 @@ button {
 .notification-icon:hover {
   fill: #81c98f; }
 
+.theme-picker {
+  fill: #74B1BF; }
+
 .submit-button:hover {
   background-color: #494c9e; }
 
@@ -675,7 +678,7 @@ html {
     .main-content {
       grid-template-rows: 58px 475px 400px 190px minmax(450px, auto) 1fr; }
       .main-content .page-title-search-bar, .main-content .traffic, .main-content .mobile-users, .main-content .social-stats, .main-content .recent-activity, .main-content .settings {
-        border-right: 1px #4d4b72 solid; } }
+        border-right: 1px #7477bf solid; } }
 
 .icon, .notification-icon {
   width: 30px;
@@ -689,6 +692,9 @@ html {
     .logo {
       width: 45px;
       height: 45px; } }
+
+.theme-picker {
+  cursor: pointer; }
 
 .profile-image {
   border-radius: 50%;
@@ -952,7 +958,8 @@ header {
       height: 300px; } }
 
 .content {
-  grid-area: content; }
+  grid-area: content;
+  position: relative; }
   @media (min-width: 768px) {
     .content {
       margin: 0;
@@ -1057,25 +1064,45 @@ nav {
   position: absolute;
   top: 0;
   right: 3%;
-  top: 19% !important;
+  top: 105% !important;
   padding: 25px;
-  background-color: #f1f1f1;
+  background-color: #EFEFEF;
   width: 80%;
   min-height: min-content;
-  max-height: 60%;
+  max-height: max-content;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   z-index: 9999999; }
   @media (min-width: 768px) {
     .pop-up-active {
-      top: 7% !important;
-      width: 40%;
-      right: 19%; } }
+      top: 0 !important;
+      width: 335%;
+      right: -805%; } }
   @media (min-width: 1024px) {
     .pop-up-active {
-      top: 8% !important;
-      width: 25%;
-      right: 12%; } }
+      width: 335%;
+      right: -1145%; } }
+  @media (min-width: 1200px) {
+    .pop-up-active {
+      right: -1703%; } }
+  @media (min-width: 1500px) {
+    .pop-up-active {
+      right: -1820%; } }
+
+.pop-up-active:after {
+  position: absolute;
+  top: 0;
+  left: 45%;
+  content: " ";
+  top: 99% !important;
+  border-width: 15px;
+  border-style: solid;
+  border-color: #EFEFEF transparent transparent transparent; }
+  @media (min-width: 768px) {
+    .pop-up-active:after {
+      top: -5% !important;
+      left: 85%;
+      border-color: transparent transparent #EFEFEF transparent; } }
 
 .empty-notification {
   display: flex;
@@ -1094,6 +1121,26 @@ nav {
     background-color: #e4e4e4; }
   .empty-notification .empty-message {
     margin: 20px 0 0 0; }
+
+.palette-container {
+  display: none; }
+  @media (min-width: 768px) {
+    .palette-container {
+      position: absolute;
+      top: 0;
+      left: 25%;
+      bottom: 1%;
+      display: unset;
+      top: unset; } }
+
+.show-palette {
+  display: unset !important;
+  position: absolute;
+  top: 0;
+  left: 4%;
+  bottom: -1410%;
+  z-index: 99999;
+  top: unset; }
 
 .setting-options {
   margin: 30px 0 30px 0; }

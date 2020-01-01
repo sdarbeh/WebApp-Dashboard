@@ -1,5 +1,6 @@
 .content {
   grid-area: content;
+  position: relative;
   @include mq("m") {
     margin: 0;
     background-color: $color-primary;}
@@ -67,7 +68,7 @@ nav {
   margin-left: -8px;
   width: 8px;
   height: 8px;
-  background-color: $color-green; }
+  background-color: $secondary-light; }
 
 .alert-pop-up-title {
   margin-top: 0;
@@ -88,34 +89,52 @@ nav {
     border-bottom: none;
   }
   .alert-pop-up-close {
-    background-color: $color-secondary;
-  }
+    background-color: $color-secondary;}
 }
+
 .alert-pop-up a {
   color: #74B1BF;
 }
+
 .pop-up-active {
   display: unset;
   @include position($pos: absolute, $right: 3%);
-  top: 19% !important;
+  top: 105% !important;
   padding: 25px;
-  background-color: #f1f1f1;
+  background-color: $background-light;
   width: 80%;
   min-height: min-content;
-  max-height: 60%;
+  max-height: max-content;
+  // real world: set notifications to a maximum of 4 or pop-up box will be too long
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   border-radius: 10px;
   z-index: 9999999;
-  @include mq("m") {
-    top: 7% !important;
-    width: 40%;
-    right: 19%;
-  }
-  @include mq("l") {
-    top: 8% !important;
-    width: 25%;
-    right: 12%;}
+    @include mq("m") {
+      top: 0 !important;
+      width: 335%;
+      right: -805%;}
+    @include mq("l") {
+      width: 335%;
+      right: -1145%;}
+    @include mq('xl') {
+      right: -1703%;}
+    @include mq('max-width') {
+      right: -1820%;}
 }
+// arrow
+.pop-up-active:after {
+  @include position($pos:absolute, $left:45% );
+  content: " ";
+  top: 99% !important;
+  border-width: 15px;
+  border-style: solid;
+  border-color: $background-light transparent transparent transparent;
+  @include mq("m") {
+    top: -5% !important;
+    left: 85%;
+    border-color: transparent transparent $background-light transparent;}
+}
+
 .empty-notification {
   @include flex($align: center, $just: center, $wrap:wrap);
   margin: 30px auto 20px auto;
@@ -128,7 +147,20 @@ nav {
     background-color: lighten($background-dark, 15);
   }
   .empty-message {
-    margin: 20px 0 0 0;
-  }
+    margin: 20px 0 0 0;}
 }
-// Icons-bell-o, alert-pop-up, profile-pic and user-name moved to _header on screen size 768px and bigger
+// bottom left theme picker
+.palette-container {
+  display: none;
+  @include mq("m") {
+    @include position($pos:absolute, $bottom: 1%, $left: 25%);
+    display: unset;
+    top: unset; }
+}
+.show-palette {
+   display: unset!important;
+   @include position($pos:absolute, $bottom: -1410%, $left: 4%, $z: 99999);
+   top: unset;
+}
+
+// Icons-bell-o, alert-pop-up, profile-pic, and user-name moved to _header on screen size 768px and bigger
