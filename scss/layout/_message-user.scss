@@ -1,5 +1,4 @@
 .message-user input, .settings select, .message-user textarea, .message-user select {
-  width: 95% !important;
   height: 40px;
   border-radius: 5px;
   border: $border-darker;
@@ -7,6 +6,9 @@
   background: $background-light;
   margin: 10px 0 10px 0;
   padding: 10px 2% 10px 2% !important;
+}
+.message-user input, .message-user textarea {
+  width: 95% !important;
 }
 
 .message-user {
@@ -22,7 +24,7 @@
 textarea {
   height: 100px !important; }
 
-.settings select {
+#timezone {
   width: 100%; }
 
 // autocomplete.css overrides

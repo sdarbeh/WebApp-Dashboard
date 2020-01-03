@@ -151,10 +151,12 @@ bodyOnLoad = () => {
         document.querySelector("#timezone").value = localStorage.getItem("timezone");
     }
 };
+
 document.querySelector(".settings-submit-button").addEventListener("click", () => {
     localStorage.setItem("email", document.querySelector("#email-toggle").checked);
     localStorage.setItem("public", document.querySelector("#profile-toggle").checked);
     localStorage.setItem("timezone", document.querySelector("#timezone").value);
+    alert("Settings saved successfully");
 });
 document.querySelector(".settings-cancel-button").addEventListener("click", function(){
     localStorage.removeItem("email");
@@ -163,6 +165,7 @@ document.querySelector(".settings-cancel-button").addEventListener("click", func
     document.querySelector("#email-toggle").checked = false;
     document.querySelector("#profile-toggle").checked = false;
     document.querySelector("#timezone").value = 0;
+    alert("Settings has been reset");
 });
 // Charts
 // ----------------------------------------  LINE GRAPHS ------------------------------------------------------

@@ -1135,7 +1135,6 @@ nav {
   width: 46%; }
 
 .message-user input, .settings select, .message-user textarea, .message-user select {
-  width: 95% !important;
   height: 40px;
   border-radius: 5px;
   border: 1px #BEBEBE solid;
@@ -1143,6 +1142,9 @@ nav {
   background: #EFEFEF;
   margin: 10px 0 10px 0;
   padding: 10px 2% 10px 2% !important; }
+
+.message-user input, .message-user textarea {
+  width: 95% !important; }
 
 .message-user #message-user {
   margin-top: 25px; }
@@ -1155,7 +1157,7 @@ nav {
 textarea {
   height: 100px !important; }
 
-.settings select {
+#timezone {
   width: 100%; }
 
 .autocomplete-container {
