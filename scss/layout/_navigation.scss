@@ -14,6 +14,10 @@ nav {
     display: unset;
     width: unset;}
 }
+// class for nav page li
+.dashboard-page {
+  border-left: 3px $secondary-light solid;
+}
 
 .menu-expanded {
   @include full-page;
@@ -34,10 +38,13 @@ nav {
 }
 
 .navigation-items li {
-  width: 100%; }
+  width: 100%;
+@include mq("m") {
+  margin: 20px 0 20px 0;
+}}
 
 .navigation-items p, .navigation-items-2, .user-name {
-  margin: 0 0 10px 0; }
+  margin: 0; }
 
 .border {
   width: 50% !important;
@@ -47,7 +54,10 @@ nav {
 
 .nav-icon, .profile-pic {
   margin: 20px 0 20px 0;
-  fill: $color-medium-text; }
+  fill: $color-medium-text;
+@include mq("m") {
+  margin: 0;
+}}
 .user-name {
   color: $color-light-text;
 }
@@ -117,7 +127,7 @@ nav {
       width: 335%;
       right: -1145%;}
     @include mq('xl') {
-      right: -1703%;}
+      right: -1712%;}
     @include mq('max-width') {
       right: -1820%;}
 }
@@ -148,19 +158,6 @@ nav {
   }
   .empty-message {
     margin: 20px 0 0 0;}
-}
-// bottom left theme picker
-.palette-container {
-  display: none;
-  @include mq("m") {
-    @include position($pos:absolute, $bottom: 1%, $left: 25%);
-    display: unset;
-    top: unset; }
-}
-.show-palette {
-   display: unset!important;
-   @include position($pos:absolute, $bottom: -1410%, $left: 4%, $z: 99999);
-   top: unset;
 }
 
 // Icons-bell-o, alert-pop-up, profile-pic, and user-name moved to _header on screen size 768px and bigger

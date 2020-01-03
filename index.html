@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>TetraAnalytics Dashboard</title>
     <link rel="icon" type="imgage/png" href="images/logo.png"/>
-    <link rel="stylesheet" href="scss/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Quicksand:500,600,700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body class="wrapper">
         <header>
             <div class="burger mobile">
-                <div class="hamburger hamburger--squeeze" type="button">
+                <div class="hamburger hamburger--squeeze">
                     <span class="hamburger-box"><span class="hamburger-inner"></span></span>
                 </div>
             </div>
@@ -23,19 +25,19 @@
         <div class="content">
             <nav>
                 <ul class="navigation-items">
-                    <li><a href="#"><svg class="icon nav-icon icon-dashboard"><use xlink:href="sprite/sprite.svg#icon-dashboard"/></svg>
+                    <li class="dashboard-page"><a href="#"><svg class="icon nav-icon icon-dashboard"><use xlink:href="sprite/sprite.svg#icon-dashboard"/></svg>
                         <p class="mobile">Dashboard</p></a></li>
-                    <li><a href="#"><svg class="icon nav-icon icon-users"><use xlink:href="sprite/sprite.svg#icon-users"/></svg>
+                    <li class="members-page"><a href="#"><svg class="icon nav-icon icon-users"><use xlink:href="sprite/sprite.svg#icon-users"/></svg>
                         <p class="mobile">Members</p></a></li>
-                    <li><a href="#"><svg class="icon nav-icon icon-stats-bars"><use xlink:href="sprite/sprite.svg#icon-stats-bars"/></svg>
+                    <li class="analytics-page"><a href="#"><svg class="icon nav-icon icon-stats-bars"><use xlink:href="sprite/sprite.svg#icon-stats-bars"/></svg>
                         <p class="mobile">Analytics</p></a></li>
-                    <li><a href="#"><svg class="icon nav-icon icon-setting"><use xlink:href="sprite/sprite.svg#icon-setting"/></svg>
+                    <li class="settings-page"><a href="#"><svg class="icon nav-icon icon-setting"><use xlink:href="sprite/sprite.svg#icon-setting"/></svg>
                         <p class="border mobile">Settings</p></a></li>
                 </ul>
                 <ul class="navigation-items-2">
                     <li class="alert-icon-light-relative"><a href="#"><svg class="icon nav-icon icon-bell-o"><use xlink:href="sprite/sprite.svg#icon-bell-o"/></svg>
                         <span class="alert-icon-light"></span><p class="mobile">Notifications</p></a></li>
-                    <li><a href="#"><img class="icon profile-pic" src="images/member-1.jpg" alt="profile-pic">
+                    <li class="profile-page"><a href="#"><img class="icon profile-pic" src="images/member-1.jpg" alt="profile-pic">
                         <h3 class="user-name">Josh Miller</h3></a></li>
                     <li class="sign-out mobile"><a href="#">
                         <p>Sign Out</p></a></li>
@@ -80,9 +82,6 @@
                     </form>
                 </div>
             </div>
-            <div class="palette-container">
-                <svg class="theme-picker icon"><use xlink:href="sprite/sprite.svg#icon-palette"/></svg>
-            </div>
         </div>
         <main class="main-content">
             <section class="traffic">
@@ -94,23 +93,28 @@
                     <div class="traffic-container">
                         <h3 class="section-title">Traffic</h3>
                         <ul class="traffic-filter">
-                            <li><a href="#" class="traffic-options">Hourly</a></li>
-                            <li><a href="#" class="traffic-options">Daily</a></li>
-                            <li><a href="#" class="traffic-options">Weekly</a></li>
-                            <li><a href="#" class="traffic-options">Monthly</a></li>
+                            <li class="hourly-option-container"><a href="#" class="traffic-options hourly-option">Hourly</a></li>
+                            <li class="daily-option-container"><a href="#" class="traffic-options daily-option">Daily</a></li>
+                            <li class="weekly-option-container"><a href="#" class="traffic-options weekly-option">Weekly</a></li>
+                            <li class="monthly-option-container"><a href="#" class="traffic-options monthly-option">Monthly</a></li>
                         </ul>
                     </div>
-                    <div class="traffic-chart chart-container traffic-chart-weekly">
-                        <canvas width="100%" height="100%" id="traffic-chart-weekly"></canvas>
-                    </div>
-                    <div class="traffic-chart chart-container traffic-chart-hourly">
-                        <canvas width="100%" height="100%" id="traffic-chart-hourly"></canvas>
-                    </div>
-                    <div class="traffic-chart chart-container traffic-chart-daily">
-                        <canvas width="100%" height="100%" id="traffic-chart-daily"></canvas>
-                    </div>
-                    <div class="traffic-chart chart-container traffic-chart-monthly">
-                        <canvas width="100%" height="100%" id="traffic-chart-monthly"></canvas>
+                    <div class="traffic-chart chart-container">
+                        <div class="hourly-legend-container">
+                            <div class="hourly hourly-am">
+                                <div class="hourly-container">
+                                    <div class="hourly-color hourly-am-color"></div>
+                                    <p class="hourly-title hourly-am-title">AM</p>
+                                </div>
+                            </div>
+                            <div class="hourly hourly-pm">
+                                <div class="hourly-container">
+                                    <div class="hourly-color hourly-pm-color"></div>
+                                    <p class="hourly-title hourly-pm-title">PM</p>
+                                </div>
+                            </div>
+                        </div>
+                        <canvas width="100%" height="100%" id="traffic-chart"></canvas>
                     </div>
                 </div>
             </section>
@@ -255,13 +259,13 @@
                     </div>
                     <div class="message-user-form-container">
                         <form action="#" id="message-user">
-                            <label for="search-user">
-                                <input type="search" id="search-user" placeholder="Search for User">
-                            </label>
+                                <label id="search-user-label">
+<!--                                    <input type="search" id="search-user" placeholder="Search for User">-->
+                                </label>
                             <label for="user_message">
                                 <textarea name="user_message" id="user_message" placeholder="Message for User"></textarea>
                             </label>
-                            <button type="submit" class="submit-button">Send</button>
+                            <button type="button" class="submit-button message-user-submit-button">Send</button>
                         </form>
                     </div>
                 </div>
@@ -278,7 +282,7 @@
                             </div>
                             <div class="email-toggle">
                                 <label class="switch">
-                                    <input type="checkbox">
+                                    <input type="checkbox" id="email-toggle">
                                     <span class="slider round"></span>
                                     <span class="on"></span><span class="off"></span>
                                 </label>
@@ -290,7 +294,7 @@
                             </div>
                             <div class="profile-private-toggle">
                                 <label class="switch">
-                                    <input type="checkbox">
+                                    <input type="checkbox" id="profile-toggle">
                                     <span class="slider round"></span>
                                     <span class="on"></span><span class="off"></span>
                                 </label>
@@ -312,13 +316,13 @@
                             </label>
                         </div>
                         <div class="settings-button-container">
-                            <button type="submit" class="submit-button">Save</button>
+                            <button type="button" class="submit-button settings-submit-button">Save</button>
                             <button type="button" class="settings-cancel-button">Cancel</button>
                         </div>
                     </form>
                 </div>
             </aside>
         </main>
-        <script src="js/app.js"></script>
+        <script src="js/main.js"></script>
 </body>
 </html>

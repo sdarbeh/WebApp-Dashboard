@@ -39,5 +39,9 @@
   @include mq("l") {
     margin-left: 30px;}
 }
-.stat-counter {
-  margin: -15px 0 0 0; }
+
+.title-stat-counter {
+  .stat-title {
+    margin: 0 0 10px 0; }
+  .stat-counter {
+    margin: -15px 0 0 0;} }

@@ -19,7 +19,13 @@
 
 .traffic-filter li {
   display: inline;
-  margin: 0 10px 0 10px; }
+  margin: 0; }
+
+.traffic-filter a {
+  padding: 5px 15px 5px 15px;
+  border-radius: 60px;
+  outline: none
+}
 
 .filter-active {
   background-color: $secondary-light;
@@ -31,10 +37,56 @@
 .traffic-chart {
   height: 250px;
   padding: 0 20px 0 20px;
+  position: relative;
   @include mq("m") {
     height: 200px; }
   @include mq("l") {
     height: 300px; } }
 
-.traffic-chart-hourly, .traffic-chart-daily, .traffic-chart-monthly {
-  display: none;}
+.hourly-legend-container {
+  display: none !important;
+}
+//class is added to .hourly-legend-container when hourly chart is displayed
+.hourlyChart-is-displayed {
+  display: unset!important;
+  @include flex($just: space-between, $align: center);
+  @include position($pos: absolute, $right: 8% );
+  top: -6% !important;
+  width: max-content;
+    .hourly, .hourly-title, .hourly-color {
+      display: inline-block;
+    }
+    .hourly-container {
+      @include flex( $align: center);
+      margin: 0 0 0 10px;
+    }
+    .hourly-color {
+      width: 30px;
+      height: 8px;
+      border: 3px transparent solid;
+    }
+    .hourly-title {
+      margin: 0 0 0 10px;
+      color: $color-dark-text;
+      font-size: .9rem;
+    }
+    .hourly-am-color {
+      border-color: $color-secondary;
+      background-color: rgba(145, 147, 217, 0.60);
+    }
+    .hourly-pm-color {
+      border-color: $secondary-light;
+      background-color: rgba(112, 192, 143, 0.40);
+    }
+  @include mq("m") {
+    right: 4%;
+  }
+  @include mq("l") {
+    right: 2%;
+  }
+  @include mq("xl") {
+    right: 3%;
+  }
+}
+
+

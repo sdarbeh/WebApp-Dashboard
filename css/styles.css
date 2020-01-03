@@ -545,7 +545,7 @@ ul {
   top: 0;
   right: 5%;
   position: absolute;
-  top: 30% !important; }
+  top: 24% !important; }
   @media (min-width: 768px) {
     .close {
       right: 3%; } }
@@ -564,7 +564,7 @@ button {
   color: white;
   text-transform: uppercase; }
 
-[type="submit"] {
+.submit-button {
   background: #7477bf;
   margin: 20px 0 20px 0; }
 
@@ -587,9 +587,6 @@ button {
 
 .notification-icon:hover {
   fill: #81c98f; }
-
-.theme-picker {
-  fill: #74B1BF; }
 
 .submit-button:hover {
   background-color: #494c9e; }
@@ -692,9 +689,6 @@ html {
     .logo {
       width: 45px;
       height: 45px; } }
-
-.theme-picker {
-  cursor: pointer; }
 
 .profile-image {
   border-radius: 50%;
@@ -957,6 +951,9 @@ header {
     .mobile-users-chart {
       height: 300px; } }
 
+.empty-content {
+  border-color: red !important; }
+
 .content {
   grid-area: content;
   position: relative; }
@@ -973,6 +970,9 @@ nav {
       grid-area: navigation;
       display: unset;
       width: unset; } }
+
+.dashboard-page {
+  border-left: 3px #81c98f solid; }
 
 .menu-expanded {
   width: 100%;
@@ -998,9 +998,12 @@ nav {
 
 .navigation-items li {
   width: 100%; }
+  @media (min-width: 768px) {
+    .navigation-items li {
+      margin: 20px 0 20px 0; } }
 
 .navigation-items p, .navigation-items-2, .user-name {
-  margin: 0 0 10px 0; }
+  margin: 0; }
 
 .border {
   width: 50% !important;
@@ -1011,6 +1014,9 @@ nav {
 .nav-icon, .profile-pic {
   margin: 20px 0 20px 0;
   fill: #BEBEBE; }
+  @media (min-width: 768px) {
+    .nav-icon, .profile-pic {
+      margin: 0; } }
 
 .user-name {
   color: #F3F3F3; }
@@ -1084,7 +1090,7 @@ nav {
       right: -1145%; } }
   @media (min-width: 1200px) {
     .pop-up-active {
-      right: -1703%; } }
+      right: -1712%; } }
   @media (min-width: 1500px) {
     .pop-up-active {
       right: -1820%; } }
@@ -1122,26 +1128,6 @@ nav {
   .empty-notification .empty-message {
     margin: 20px 0 0 0; }
 
-.palette-container {
-  display: none; }
-  @media (min-width: 768px) {
-    .palette-container {
-      position: absolute;
-      top: 0;
-      left: 25%;
-      bottom: 1%;
-      display: unset;
-      top: unset; } }
-
-.show-palette {
-  display: unset !important;
-  position: absolute;
-  top: 0;
-  left: 4%;
-  bottom: -1410%;
-  z-index: 99999;
-  top: unset; }
-
 .setting-options {
   margin: 30px 0 30px 0; }
 
@@ -1149,14 +1135,14 @@ nav {
   width: 46%; }
 
 .message-user input, .settings select, .message-user textarea, .message-user select {
-  width: 90%;
+  width: 95% !important;
   height: 40px;
   border-radius: 5px;
   border: 1px #BEBEBE solid;
   outline: none;
   background: #EFEFEF;
   margin: 10px 0 10px 0;
-  padding: 5px 5% 5px 5%; }
+  padding: 10px 2% 10px 2% !important; }
 
 .message-user #message-user {
   margin-top: 25px; }
@@ -1171,6 +1157,40 @@ textarea {
 
 .settings select {
   width: 100%; }
+
+.autocomplete-container {
+  position: relative;
+  width: unset !important;
+  height: unset !important; }
+  .autocomplete-container .autocomplete-input {
+    height: 20px !important;
+    float: left; }
+  .autocomplete-container .proposal-box {
+    position: absolute;
+    height: auto;
+    border-left: 1px solid rgba(0, 0, 0, 0.11);
+    border-right: 1px solid rgba(0, 0, 0, 0.11);
+    left: 0; }
+  .autocomplete-container .proposal-list {
+    list-style: none;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.44);
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-padding-start: 0; }
+  .autocomplete-container .proposal-list li {
+    text-align: left;
+    padding: 5px;
+    font-family: inherit;
+    border-bottom: 1px #F0F0F0 solid;
+    height: 25px;
+    line-height: 25px;
+    background-color: rgba(255, 255, 255, 0.8);
+    cursor: pointer; }
+  .autocomplete-container li.proposal.selected {
+    background-color: #7477bf;
+    color: #FFFFFF; }
 
 .social-stats .section-title {
   margin-bottom: 30px; }
@@ -1217,7 +1237,9 @@ textarea {
   .social-logo-container, .title-stat-counter {
     margin-left: 30px; } }
 
-.stat-counter {
+.title-stat-counter .stat-title {
+  margin: 0 0 10px 0; }
+.title-stat-counter .stat-counter {
   margin: -15px 0 0 0; }
 
 .traffic {
@@ -1244,7 +1266,12 @@ textarea {
 
 .traffic-filter li {
   display: inline;
-  margin: 0 10px 0 10px; }
+  margin: 0; }
+
+.traffic-filter a {
+  padding: 5px 15px 5px 15px;
+  border-radius: 60px;
+  outline: none; }
 
 .filter-active {
   background-color: #81c98f;
@@ -1255,7 +1282,8 @@ textarea {
 
 .traffic-chart {
   height: 250px;
-  padding: 0 20px 0 20px; }
+  padding: 0 20px 0 20px;
+  position: relative; }
   @media (min-width: 768px) {
     .traffic-chart {
       height: 200px; } }
@@ -1263,7 +1291,47 @@ textarea {
     .traffic-chart {
       height: 300px; } }
 
-.traffic-chart-hourly, .traffic-chart-daily, .traffic-chart-monthly {
-  display: none; }
+.hourly-legend-container {
+  display: none !important; }
+
+.hourlyChart-is-displayed {
+  display: unset !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 8%;
+  top: -6% !important;
+  width: max-content; }
+  .hourlyChart-is-displayed .hourly, .hourlyChart-is-displayed .hourly-title, .hourlyChart-is-displayed .hourly-color {
+    display: inline-block; }
+  .hourlyChart-is-displayed .hourly-container {
+    display: flex;
+    align-items: center;
+    margin: 0 0 0 10px; }
+  .hourlyChart-is-displayed .hourly-color {
+    width: 30px;
+    height: 8px;
+    border: 3px transparent solid; }
+  .hourlyChart-is-displayed .hourly-title {
+    margin: 0 0 0 10px;
+    color: #848484;
+    font-size: .9rem; }
+  .hourlyChart-is-displayed .hourly-am-color {
+    border-color: #7477bf;
+    background-color: rgba(145, 147, 217, 0.6); }
+  .hourlyChart-is-displayed .hourly-pm-color {
+    border-color: #81c98f;
+    background-color: rgba(112, 192, 143, 0.4); }
+  @media (min-width: 768px) {
+    .hourlyChart-is-displayed {
+      right: 4%; } }
+  @media (min-width: 1024px) {
+    .hourlyChart-is-displayed {
+      right: 2%; } }
+  @media (min-width: 1200px) {
+    .hourlyChart-is-displayed {
+      right: 3%; } }
 
 /*# sourceMappingURL=styles.css.map */

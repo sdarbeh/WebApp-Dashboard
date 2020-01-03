@@ -17,7 +17,7 @@
 .close {
   @include position($pos: absolute, $right: 5%);
   position: absolute;
-  top: 30% !important;
+  top: 24% !important;
   @include mq("m") {
     right: 3%;}
   @include mq("l") {

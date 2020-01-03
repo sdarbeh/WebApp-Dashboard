@@ -1,12 +1,13 @@
 .message-user input, .settings select, .message-user textarea, .message-user select {
-  width: 90%;
+  width: 95% !important;
   height: 40px;
   border-radius: 5px;
   border: $border-darker;
   outline: none;
   background: $background-light;
   margin: 10px 0 10px 0;
-  padding: 5px 5% 5px 5%; }
+  padding: 10px 2% 10px 2% !important;
+}
 
 .message-user {
   #message-user{
@@ -23,3 +24,44 @@ textarea {
 
 .settings select {
   width: 100%; }
+
+// autocomplete.css overrides
+.autocomplete-container {
+  position: relative;
+  width: unset !important;
+  height: unset !important;
+  .autocomplete-input {
+    height: 20px!important;
+    float: left;
+  }
+  .proposal-box {
+    position: absolute;
+    height: auto;
+    border-left: 1px solid rgba(0, 0, 0, 0.11);
+    border-right: 1px solid rgba(0, 0, 0, 0.11);
+    left: 0;
+  }
+  .proposal-list {
+    list-style: none;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.44);
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-padding-start: 0;
+  }
+  .proposal-list li {
+    text-align: left;
+    padding: 5px;
+    font-family: inherit;
+    border-bottom: $border-light;
+    height: 25px;
+    line-height: 25px;
+    background-color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+  }
+  li.proposal.selected {
+    background-color: $color-secondary;
+    color: $white;
+  }
+}
