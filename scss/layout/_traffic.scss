@@ -10,7 +10,7 @@
 .traffic-container {
   margin-top: 20px;
   .traffic-filter {
-    margin: 20px 0 0 20px;}
+    margin: 20px 0 0 10px;}
   @include mq("m") {
     @include flex($align: center);
     margin: 0 0 20px 0;

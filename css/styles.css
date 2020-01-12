@@ -617,6 +617,22 @@ button {
     transform: translate(1px, 2px) rotate(0deg); }
   100% {
     transform: translate(1px, -2px) rotate(-1deg); } }
+/* width */
+::-webkit-scrollbar {
+  width: 2px; }
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #4d4b72; }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #FFFFFF; }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #7477bf; }
+
 html {
   overflow: scroll;
   overflow-x: hidden; }
@@ -677,7 +693,7 @@ html {
       .main-content .page-title-search-bar, .main-content .traffic, .main-content .mobile-users, .main-content .social-stats, .main-content .recent-activity, .main-content .settings {
         border-right: 1px #7477bf solid; } }
 
-.icon, .notification-icon {
+.icon, .notification-icon, .icon-github {
   width: 30px;
   height: 30px; }
 
@@ -870,7 +886,7 @@ header {
     position: absolute;
     top: 0;
     left: 45%;
-    z-index: 99999;
+    z-index: 1;
     top: 4px !important; }
     @media (min-width: 768px) {
       header .logo-container {
@@ -981,29 +997,33 @@ nav {
   top: 0;
   left: 0;
   z-index: 1;
+  padding: 50px 0 20px 0;
   background-color: #4d4b72;
   overflow-y: hidden;
   touch-action: none;
   transition: 0.5s;
   display: unset; }
+  .menu-expanded p {
+    margin: 0; }
 
 .navigation-items, .navigation-items-2 {
   text-align: center; }
 
-.navigation-items {
-  padding-top: 80px; }
-  @media (min-width: 768px) {
-    .navigation-items {
-      padding-top: unset; } }
+@media (min-width: 768px) {
+  .navigation-items {
+    padding-top: unset; } }
 
 .navigation-items li {
   width: 100%; }
   @media (min-width: 768px) {
     .navigation-items li {
-      margin: 20px 0 20px 0; } }
+      margin: 10px 0; } }
 
 .navigation-items p, .navigation-items-2, .user-name {
   margin: 0; }
+
+.navigation-items-2 {
+  height: 100%; }
 
 .border {
   width: 50% !important;
@@ -1012,7 +1032,7 @@ nav {
   padding-bottom: 30px; }
 
 .nav-icon, .profile-pic {
-  margin: 20px 0 20px 0;
+  margin: 4% 0 4% 0;
   fill: #BEBEBE; }
   @media (min-width: 768px) {
     .nav-icon, .profile-pic {
@@ -1025,7 +1045,7 @@ nav {
   border-radius: 50%; }
 
 .icon-bell-o, .sign-out p {
-  margin-top: 30px; }
+  margin-top: 25px; }
 
 .alert-icon-light-relative {
   position: relative; }
@@ -1040,6 +1060,18 @@ nav {
   width: 8px;
   height: 8px;
   background-color: #81c98f; }
+
+.icon-github {
+  position: absolute;
+  top: 0;
+  z-index: 999999;
+  top: 85% !important;
+  left: 5%;
+  fill: #BEBEBE; }
+  @media (min-width: 768px) {
+    .icon-github {
+      top: 94.5% !important;
+      left: 20%; } }
 
 .alert-pop-up-title {
   margin-top: 0; }
@@ -1257,7 +1289,7 @@ textarea {
 .traffic-container {
   margin-top: 20px; }
   .traffic-container .traffic-filter {
-    margin: 20px 0 0 20px; }
+    margin: 20px 0 0 10px; }
   @media (min-width: 768px) {
     .traffic-container {
       display: flex;

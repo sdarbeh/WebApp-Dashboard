@@ -10,7 +10,7 @@ header {
   .hamburger {
     @include position($pos: absolute, $left: 0px, $z: 99999)}
   .logo-container {
-    @include position($pos: absolute, $left: 45%, $z: 99999);
+    @include position($pos: absolute, $left: 45%, $z: 1);
     top: 4px!important;
     @include mq("m") {
       top: 10px !important;
