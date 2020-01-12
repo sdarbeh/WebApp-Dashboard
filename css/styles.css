@@ -1017,7 +1017,7 @@ nav {
   width: 100%; }
   @media (min-width: 768px) {
     .navigation-items li {
-      margin: 10px 0; } }
+      margin: 20px 0; } }
 
 .navigation-items p, .navigation-items-2, .user-name {
   margin: 0; }
@@ -1289,7 +1289,7 @@ textarea {
 .traffic-container {
   margin-top: 20px; }
   .traffic-container .traffic-filter {
-    margin: 20px 0 0 10px; }
+    margin: 20px 0 0 0; }
   @media (min-width: 768px) {
     .traffic-container {
       display: flex;
