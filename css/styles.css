@@ -617,6 +617,22 @@ button {
     transform: translate(1px, 2px) rotate(0deg); }
   100% {
     transform: translate(1px, -2px) rotate(-1deg); } }
+/* width */
+::-webkit-scrollbar {
+  width: 2px; }
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #4d4b72; }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #FFFFFF; }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #7477bf; }
+
 html {
   overflow: scroll;
   overflow-x: hidden; }
